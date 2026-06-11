@@ -2,16 +2,15 @@ name: Upload Videos to YouTube
 
 on:
   schedule:
-    - cron: "0 9 * * *"  # Daily at 9am UTC — adjust to your timezone
-  workflow_dispatch:       # Also allows manual trigger from the GitHub UI
+    - cron: "0 9 * * *"
+  workflow_dispatch:
 
 permissions:
-  contents: write          # Needed to commit the updated uploaded.json
+  contents: write
 
 jobs:
   upload:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -26,7 +25,6 @@ jobs:
 
       - name: Run uploader
         env:
-          # Add one line per channel matching the token_env in channels.json
           GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
           GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
         run: python main.py
