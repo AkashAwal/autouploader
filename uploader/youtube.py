@@ -1,7 +1,12 @@
 import json
 from pathlib import Path
 
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
+
+
+class QuotaExceededError(Exception):
+    pass
 
 
 def upload_video(service, file_path: str, title: str, defaults: dict) -> str:
@@ -27,7 +32,12 @@ def upload_video(service, file_path: str, title: str, defaults: dict) -> str:
 
     response = None
     while response is None:
-        status, response = request.next_chunk()
+        try:
+            status, response = request.next_chunk()
+        except HttpError as e:
+            if e.status_code == 429 or "rateLimitExceeded" in str(e):
+                raise QuotaExceededError("YouTube daily upload quota exceeded.")
+            raise
         if status:
             print(f"  Upload {int(status.progress() * 100)}%")
 

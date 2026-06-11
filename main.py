@@ -15,7 +15,7 @@ from uploader.state import (
     mark_uploaded,
     save_state,
 )
-from uploader.youtube import upload_video
+from uploader.youtube import QuotaExceededError, upload_video
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
@@ -80,7 +80,11 @@ def process_channel(channel: dict, state: dict) -> dict:
             download_video(drive, file_id, dest)
 
             print(f"  [{file_name}] Uploading as '{title}'...")
-            yt_id = upload_video(youtube, dest, title, defaults)
+            try:
+                yt_id = upload_video(youtube, dest, title, defaults)
+            except QuotaExceededError:
+                print("  YouTube daily quota reached. Stopping for today — will resume tomorrow.")
+                return state
             print(f"  [{file_name}] Done -> https://youtu.be/{yt_id}")
 
             state = mark_uploaded(state, file_id, name)
