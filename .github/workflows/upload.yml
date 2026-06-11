@@ -1,0 +1,40 @@
+name: Upload Videos to YouTube
+
+on:
+  schedule:
+    - cron: "0 9 * * *"  # Daily at 9am UTC — adjust to your timezone
+  workflow_dispatch:       # Also allows manual trigger from the GitHub UI
+
+permissions:
+  contents: write          # Needed to commit the updated uploaded.json
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run uploader
+        env:
+          # Add one line per channel matching the token_env in channels.json
+          GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
+          GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
+        run: python main.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add uploaded.json
+          git diff --cached --quiet || git commit -m "chore: update uploaded state [skip ci]"
+          git push

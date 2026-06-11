@@ -1,0 +1,14 @@
+[
+  {
+    "name": "AI Tools",
+    "drive_folder_id": "1YKqZJe120qfeXoGIflkgjRC8z4-pdVks",
+    "token_env": "GOOGLE_TOKEN_CH1",
+    "defaults": {
+      "title_prefix": "AI Tools",
+      "privacy_status": "private",
+      "description": "",
+      "tags": ["ai", "ai tools", "artificial intelligence", "tech"],
+      "category_id": "28"
+    }
+  }
+]
