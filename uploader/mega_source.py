@@ -48,21 +48,25 @@ def _decrypt_attr(data: str, key: tuple) -> dict:
     return json.loads(match.group().decode('utf-8'))
 
 
+def _ecb_decrypt(data: bytes, key: bytes) -> bytes:
+    out = b''
+    cipher = AES.new(key, AES.MODE_ECB)
+    for i in range(0, len(data), 16):
+        block = data[i:i + 16]
+        if len(block) == 16:
+            out += cipher.decrypt(block)
+    return out
+
+
 def _file_key(k_str: str, folder_key: tuple) -> tuple:
     if ':' in k_str:
         k_str = k_str.split(':')[1]
-    enc = _to_a32(_b64d(k_str))
-    # Repeat folder key to match encrypted key length
-    fk = (folder_key * ((len(enc) // len(folder_key)) + 1))[:len(enc)]
-    node_key = _xor(enc, fk)
-    if len(node_key) >= 8:
-        return (
-            node_key[0] ^ node_key[4],
-            node_key[1] ^ node_key[5],
-            node_key[2] ^ node_key[6],
-            node_key[3] ^ node_key[7],
-        )
-    return node_key[:4]
+    enc_bytes = _b64d(k_str)
+    fk_bytes = _to_bytes(folder_key)
+    dec = _to_a32(_ecb_decrypt(enc_bytes, fk_bytes))
+    if len(dec) >= 8:
+        return (dec[0] ^ dec[4], dec[1] ^ dec[5], dec[2] ^ dec[6], dec[3] ^ dec[7])
+    return dec[:4]
 
 
 # --- Mega public folder API ---
