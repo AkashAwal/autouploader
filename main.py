@@ -1,6 +1,7 @@
 import json
 import os
 import tempfile
+import urllib.request
 from pathlib import Path
 
 from google.auth.transport.requests import Request
@@ -16,6 +17,23 @@ from uploader.state import (
     save_state,
 )
 from uploader.youtube import QuotaExceededError, upload_video
+
+
+def notify(text: str) -> None:
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        return
+    payload = json.dumps({"chat_id": chat_id, "text": text, "parse_mode": "HTML"}).encode()
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        urllib.request.urlopen(req, timeout=10)
+    except Exception as e:
+        print(f"  [Telegram] Failed to send notification: {e}")
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
@@ -93,8 +111,14 @@ def process_channel(channel: dict, state: dict) -> dict:
                 yt_id = upload_video(youtube, dest, title, defaults)
             except QuotaExceededError:
                 print("  YouTube daily quota reached. Stopping for today — will resume tomorrow.")
+                notify(f"⏸ <b>{name}</b>: YouTube daily quota reached. Will resume tomorrow.")
                 return state
+            except Exception as e:
+                print(f"  [{file_name}] Upload failed: {e}")
+                notify(f"❌ <b>{name}</b>: Failed to upload <b>{file_name}</b>\n\n<b>Reason:</b> {e}")
+                raise
             print(f"  [{file_name}] Done -> https://youtu.be/{yt_id}")
+            notify(f"✅ <b>{name}</b>: Uploaded <b>{title}</b>\nhttps://youtu.be/{yt_id}")
 
             state = mark_uploaded(state, file_id, name)
             save_state(state)
