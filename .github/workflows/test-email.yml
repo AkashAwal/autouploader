@@ -1,0 +1,25 @@
+name: Test Email
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test email
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python3 - <<'EOF'
+          import smtplib, os
+          from email.mime.text import MIMEText
+          pw = os.environ["GMAIL_APP_PASSWORD"]
+          msg = MIMEText("AutoUploader is set up and email notifications are working.")
+          msg["Subject"] = "[AutoUploader] Test email"
+          msg["From"] = "akash.awal.07@gmail.com"
+          msg["To"] = "akash.awal.07@gmail.com"
+          msg["X-AutoUploader"] = "true"
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+              s.login("akash.awal.07@gmail.com", pw)
+              s.send_message(msg)
+          print("Sent.")
+          EOF
