@@ -94,16 +94,20 @@ def list_videos(folder_url: str) -> list:
     folder_key = _to_a32(_b64d(key_b64))
     target_parent = subfolder_handle or root_handle
 
+    candidates = [n for n in nodes if n.get("t") == 0 and n.get("p") == target_parent]
+    print(f"  [Mega] files in target folder: {len(candidates)}")
+
     videos = []
-    for node in nodes:
-        if node.get("t") != 0 or node.get("p") != target_parent:
-            continue
+    for node in candidates:
         try:
             fk = _file_key(node["k"], folder_key)
             name = _decrypt_attr(node["a"], fk).get("n", "")
-        except Exception:
+        except Exception as e:
+            print(f"  [Mega] decrypt error {node.get('h')}: {e}")
             continue
-        if os.path.splitext(name)[1].lower() in VIDEO_EXTENSIONS:
+        ext = os.path.splitext(name)[1].lower()
+        print(f"  [Mega] found file: {name!r} (ext={ext})")
+        if ext in VIDEO_EXTENSIONS:
             videos.append({"id": node["h"], "name": name})
 
     return videos
