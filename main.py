@@ -19,7 +19,7 @@ from uploader.youtube import QuotaExceededError, upload_video
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
-    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
 ]
 
 
