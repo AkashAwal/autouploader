@@ -54,6 +54,11 @@ def list_videos(folder_url: str) -> list:
     folder_key = base64_to_a32(key_b64)
     target_parent = subfolder_handle or root_handle
 
+    print(f"  [Mega] root={root_handle} subfolder={subfolder_handle} target_parent={target_parent}")
+    print(f"  [Mega] total nodes fetched: {len(nodes)}")
+    parents = {n.get("p") for n in nodes}
+    print(f"  [Mega] unique parents in nodes: {parents}")
+
     videos = []
     for node in nodes:
         if node.get("t") != 0 or node.get("p") != target_parent:
@@ -62,7 +67,8 @@ def list_videos(folder_url: str) -> list:
             file_key = _node_file_key(node, folder_key)
             attrs = decrypt_attr(node["a"], file_key)
             name = attrs.get("n", "")
-        except Exception:
+        except Exception as e:
+            print(f"  [Mega] decrypt error for node {node.get('h')}: {e}")
             continue
         if os.path.splitext(name)[1].lower() in VIDEO_EXTENSIONS:
             videos.append({"id": node["h"], "name": name})
