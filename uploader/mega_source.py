@@ -1,10 +1,13 @@
 import os
 import re
+import time
 
+import requests as _requests
 from mega import Mega
 from mega.crypto import a32_to_base64, base64_to_a32, decrypt_attr, decrypt_key
 
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".avi", ".mkv", ".webm", ".mpeg", ".mpg"}
+_SEQ = int(time.time()) % 100000
 
 
 def _parse_url(folder_url: str):
@@ -19,8 +22,14 @@ def _parse_url(folder_url: str):
     return root_handle, key_b64, subfolder_handle
 
 
-def _get_nodes(m: Mega, root_handle: str):
-    return m._api_request([{"a": "f", "c": 1, "ca": 1, "r": 1}], root_handle)
+def _fetch_folder_nodes(root_handle: str) -> list:
+    url = f"https://g.api.mega.co.nz/cs?id={_SEQ}&n={root_handle}"
+    resp = _requests.post(url, json=[{"a": "f", "c": 1, "ca": 1, "r": 1}], timeout=30)
+    resp.raise_for_status()
+    result = resp.json()
+    if isinstance(result, int):
+        raise RuntimeError(f"Mega API error: {result}")
+    return result[0].get("f", [])
 
 
 def _node_file_key(node: dict, folder_key: tuple) -> tuple:
@@ -41,14 +50,12 @@ def _node_file_key(node: dict, folder_key: tuple) -> tuple:
 
 def list_videos(folder_url: str) -> list:
     root_handle, key_b64, subfolder_handle = _parse_url(folder_url)
-    m = Mega()
-    m.login_anonymous()
-    response = _get_nodes(m, root_handle)
+    nodes = _fetch_folder_nodes(root_handle)
     folder_key = base64_to_a32(key_b64)
     target_parent = subfolder_handle or root_handle
 
     videos = []
-    for node in response.get("f", []):
+    for node in nodes:
         if node.get("t") != 0 or node.get("p") != target_parent:
             continue
         try:
@@ -65,12 +72,10 @@ def list_videos(folder_url: str) -> list:
 
 def download_video(folder_url: str, node_id: str, dest_path: str):
     root_handle, key_b64, _ = _parse_url(folder_url)
-    m = Mega()
-    m.login_anonymous()
-    response = _get_nodes(m, root_handle)
+    nodes = _fetch_folder_nodes(root_handle)
     folder_key = base64_to_a32(key_b64)
 
-    node = next((n for n in response.get("f", []) if n["h"] == node_id), None)
+    node = next((n for n in nodes if n["h"] == node_id), None)
     if not node:
         raise RuntimeError(f"Node {node_id} not found in Mega folder.")
 
@@ -78,6 +83,8 @@ def download_video(folder_url: str, node_id: str, dest_path: str):
     file_key_b64 = a32_to_base64(file_key)
     file_url = f"https://mega.nz/file/{node_id}#{file_key_b64}"
 
+    m = Mega()
+    m.login_anonymous()
     dest_dir = os.path.dirname(dest_path)
     dest_filename = os.path.basename(dest_path)
     m.download_url(file_url, dest_path=dest_dir, dest_filename=dest_filename)
