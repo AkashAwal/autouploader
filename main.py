@@ -8,7 +8,8 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 
-from uploader.drive import download_video, list_videos
+from uploader.drive import download_video as drive_download, list_videos as drive_list
+from uploader.mega_source import download_video as mega_download, list_videos as mega_list
 from uploader.state import (
     get_channel_count,
     is_uploaded,
@@ -76,27 +77,40 @@ def build_title(defaults: dict, n: int, filename_stem: str) -> str:
 
 def process_channel(channel: dict, state: dict) -> dict:
     name = channel["name"]
-    folder_id = channel["drive_folder_id"]
-    token_env = channel["token_env"]
     defaults = channel["defaults"]
     platform = channel.get("platform", "youtube")
+    source = channel.get("source", "drive")
     max_uploads = channel.get("max_uploads_per_run")
     uploads_this_run = 0
 
     print(f"\n=== {name} ({platform}) ===")
 
-    creds = get_credentials(token_env)
-    drive = build("drive", "v3", credentials=creds)
+    # Source: how we get videos
+    if source == "mega":
+        mega_email = os.environ.get("MEGA_EMAIL")
+        mega_password = os.environ.get("MEGA_PASSWORD")
+        if not mega_email or not mega_password:
+            raise RuntimeError("MEGA_EMAIL or MEGA_PASSWORD environment variable is not set.")
+        folder_url = channel["mega_folder_url"]
+        all_videos = mega_list(mega_email, mega_password, folder_url)
+    else:
+        creds = get_credentials(channel["token_env"])
+        drive = build("drive", "v3", credentials=creds)
+        all_videos = drive_list(drive, channel["drive_folder_id"])
 
+    # Destination: where we upload
     if platform == "facebook":
         fb_token = os.environ.get(channel["fb_token_env"])
         if not fb_token:
             raise RuntimeError(f"Environment variable '{channel['fb_token_env']}' is not set.")
         fb_page_id = channel["fb_page_id"]
     else:
-        youtube = build("youtube", "v3", credentials=creds)
+        if source != "mega":
+            youtube = build("youtube", "v3", credentials=creds)
+        else:
+            yt_creds = get_credentials(channel["token_env"])
+            youtube = build("youtube", "v3", credentials=yt_creds)
 
-    all_videos = list_videos(drive, folder_id)
     new_videos = [v for v in all_videos if not is_uploaded(state, v["id"])]
 
     if not new_videos:
@@ -118,7 +132,10 @@ def process_channel(channel: dict, state: dict) -> dict:
             dest = os.path.join(tmp, file_name)
 
             print(f"\n  [{file_name}] Downloading...")
-            download_video(drive, file_id, dest)
+            if source == "mega":
+                mega_download(mega_email, mega_password, file_id, dest)
+            else:
+                drive_download(drive, file_id, dest)
 
             print(f"  [{file_name}] Uploading as '{title}'...")
             try:

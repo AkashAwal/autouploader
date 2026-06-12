@@ -29,6 +29,8 @@ jobs:
           GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
           GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MEGA_EMAIL: ${{ secrets.MEGA_EMAIL }}
+          MEGA_PASSWORD: ${{ secrets.MEGA_PASSWORD }}
         run: python main.py
 
       - name: Commit updated state
