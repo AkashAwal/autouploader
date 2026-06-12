@@ -41,7 +41,8 @@ def _node_file_key(node: dict, folder_key: tuple) -> tuple:
 
 def list_videos(folder_url: str) -> list:
     root_handle, key_b64, subfolder_handle = _parse_url(folder_url)
-    m = Mega().login_anonymous()
+    m = Mega()
+    m.login_anonymous()
     response = _get_nodes(m, root_handle)
     folder_key = base64_to_a32(key_b64)
     target_parent = subfolder_handle or root_handle
@@ -64,7 +65,8 @@ def list_videos(folder_url: str) -> list:
 
 def download_video(folder_url: str, node_id: str, dest_path: str):
     root_handle, key_b64, _ = _parse_url(folder_url)
-    m = Mega().login_anonymous()
+    m = Mega()
+    m.login_anonymous()
     response = _get_nodes(m, root_handle)
     folder_key = base64_to_a32(key_b64)
 
