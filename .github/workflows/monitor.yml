@@ -1,0 +1,40 @@
+name: Monitor YouTube Videos
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run monitor
+        env:
+          GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
+          GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python monitor.py
+
+      - name: Commit updated status
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add video_status.json
+          git diff --cached --quiet || git commit -m "chore: update video status [skip ci]"
+          git push

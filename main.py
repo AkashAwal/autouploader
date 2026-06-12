@@ -35,6 +35,7 @@ def notify(subject: str, body: str) -> None:
     msg["From"] = email
     msg["To"] = email
 
+    msg["X-AutoUploader"] = "true"
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
             smtp.login(email, app_password)
@@ -161,7 +162,7 @@ def process_channel(channel: dict, state: dict) -> dict:
                 f"Channel: {name}\nPlatform: {platform}\nTitle: {title}\nURL: {url}",
             )
 
-            state = mark_uploaded(state, file_id, name)
+            state = mark_uploaded(state, file_id, name, youtube_id=vid_id if platform == "youtube" else None, title=title)
             save_state(state)
             uploads_this_run += 1
 
