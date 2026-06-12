@@ -45,6 +45,9 @@ def get_all_video_ids(youtube) -> list[str]:
 
 
 def main():
+    import sys
+    yes = "--yes" in sys.argv
+
     channels = json.loads(Path("channels.json").read_text())
     channel = channels[0]
     token_env = channel["token_env"]
@@ -60,10 +63,11 @@ def main():
         print("Nothing to delete.")
         return
 
-    confirm = input(f"Delete all {len(video_ids)} videos? [y/N] ").strip().lower()
-    if confirm != "y":
-        print("Aborted.")
-        return
+    if not yes:
+        confirm = input(f"Delete all {len(video_ids)} videos? [y/N] ").strip().lower()
+        if confirm != "y":
+            print("Aborted.")
+            return
 
     for i, vid_id in enumerate(video_ids, 1):
         youtube.videos().delete(id=vid_id).execute()

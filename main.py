@@ -41,6 +41,9 @@ def get_credentials(token_env: str) -> Credentials:
 
 
 def build_title(defaults: dict, n: int, filename_stem: str) -> str:
+    titles = defaults.get("titles")
+    if titles:
+        return titles[(n - 1) % len(titles)]
     prefix = defaults.get("title_prefix", "").strip()
     if prefix:
         return f"{prefix} #{n}"
@@ -52,6 +55,8 @@ def process_channel(channel: dict, state: dict) -> dict:
     folder_id = channel["drive_folder_id"]
     token_env = channel["token_env"]
     defaults = channel["defaults"]
+    max_uploads = channel.get("max_uploads_per_run")
+    uploads_this_run = 0
 
     print(f"\n=== {name} ===")
 
@@ -70,6 +75,10 @@ def process_channel(channel: dict, state: dict) -> dict:
 
     with tempfile.TemporaryDirectory() as tmp:
         for video in new_videos:
+            if max_uploads is not None and uploads_this_run >= max_uploads:
+                print(f"  Reached limit of {max_uploads} upload(s) per run. Stopping.")
+                return state
+
             file_name = video["name"]
             file_id = video["id"]
             n = get_channel_count(state, name) + 1
@@ -89,6 +98,7 @@ def process_channel(channel: dict, state: dict) -> dict:
 
             state = mark_uploaded(state, file_id, name)
             save_state(state)
+            uploads_this_run += 1
 
     return state
 
