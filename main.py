@@ -87,12 +87,8 @@ def process_channel(channel: dict, state: dict) -> dict:
 
     # Source: how we get videos
     if source == "mega":
-        mega_email = os.environ.get("MEGA_EMAIL")
-        mega_password = os.environ.get("MEGA_PASSWORD")
-        if not mega_email or not mega_password:
-            raise RuntimeError("MEGA_EMAIL or MEGA_PASSWORD environment variable is not set.")
         folder_url = channel["mega_folder_url"]
-        all_videos = mega_list(mega_email, mega_password, folder_url)
+        all_videos = mega_list(folder_url)
     else:
         creds = get_credentials(channel["token_env"])
         drive = build("drive", "v3", credentials=creds)
@@ -133,7 +129,7 @@ def process_channel(channel: dict, state: dict) -> dict:
 
             print(f"\n  [{file_name}] Downloading...")
             if source == "mega":
-                mega_download(mega_email, mega_password, file_id, dest)
+                mega_download(folder_url, file_id, dest)
             else:
                 drive_download(drive, file_id, dest)
 
