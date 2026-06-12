@@ -24,8 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install "mega.py==1.0.8" --no-deps
-          pip install "pycryptodome>=3.9.6" "tenacity>=8.0.0"
+          pip install "pycryptodome>=3.9.6"
 
       - name: Run uploader
         env:

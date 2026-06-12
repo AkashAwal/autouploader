@@ -7,21 +7,15 @@ import time
 
 import requests as _requests
 from Crypto.Cipher import AES
-from mega import Mega
+from Crypto.Util import Counter
 
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".avi", ".mkv", ".webm", ".mpeg", ".mpg"}
 _SEQ = int(time.time()) % 100000
 
 
-# --- Crypto helpers (own impl to avoid mega.crypto quirks) ---
-
 def _b64d(s):
     s = str(s) + '=='
     return base64.b64decode(s.translate(str.maketrans('-_', '+/')))
-
-
-def _b64e(b):
-    return base64.b64encode(b).translate(str.maketrans('+/', '-_')).decode().rstrip('=')
 
 
 def _to_a32(b):
@@ -33,10 +27,6 @@ def _to_a32(b):
 
 def _to_bytes(a):
     return struct.pack('>%dI' % len(a), *a)
-
-
-def _xor(a, b):
-    return tuple(x ^ y for x, y in zip(a, b))
 
 
 def _decrypt_attr(data: str, key: tuple) -> dict:
@@ -58,18 +48,19 @@ def _ecb_decrypt(data: bytes, key: bytes) -> bytes:
     return out
 
 
-def _file_key(k_str: str, folder_key: tuple) -> tuple:
+def _decode_node_key(k_str: str, folder_key: tuple) -> tuple:
     if ':' in k_str:
         k_str = k_str.split(':')[1]
-    enc_bytes = _b64d(k_str)
-    fk_bytes = _to_bytes(folder_key)
-    dec = _to_a32(_ecb_decrypt(enc_bytes, fk_bytes))
+    dec = _to_a32(_ecb_decrypt(_b64d(k_str), _to_bytes(folder_key)))
+    return dec
+
+
+def _file_key(k_str: str, folder_key: tuple) -> tuple:
+    dec = _decode_node_key(k_str, folder_key)
     if len(dec) >= 8:
         return (dec[0] ^ dec[4], dec[1] ^ dec[5], dec[2] ^ dec[6], dec[3] ^ dec[7])
     return dec[:4]
 
-
-# --- Mega public folder API ---
 
 def _parse_url(folder_url: str):
     root_match = re.search(r"/folder/([^/#?]+)#([^/]+)", folder_url)
@@ -99,18 +90,15 @@ def list_videos(folder_url: str) -> list:
     target_parent = subfolder_handle or root_handle
 
     candidates = [n for n in nodes if n.get("t") == 0 and n.get("p") == target_parent]
-    print(f"  [Mega] files in target folder: {len(candidates)}")
 
     videos = []
     for node in candidates:
         try:
             fk = _file_key(node["k"], folder_key)
             name = _decrypt_attr(node["a"], fk).get("n", "")
-        except Exception as e:
-            print(f"  [Mega] decrypt error {node.get('h')}: {e}")
+        except Exception:
             continue
         ext = os.path.splitext(name)[1].lower()
-        print(f"  [Mega] found file: {name!r} (ext={ext})")
         if ext in VIDEO_EXTENSIONS:
             videos.append({"id": node["h"], "name": name})
 
@@ -126,9 +114,31 @@ def download_video(folder_url: str, node_id: str, dest_path: str):
     if not node:
         raise RuntimeError(f"Node {node_id} not found in Mega folder.")
 
-    fk = _file_key(node["k"], folder_key)
-    file_url = f"https://mega.nz/file/{node_id}#{_b64e(_to_bytes(fk))}"
+    dec = _decode_node_key(node["k"], folder_key)
+    if len(dec) < 8:
+        raise RuntimeError("File key too short")
 
-    m = Mega()
-    m.login_anonymous()
-    m.download_url(file_url, dest_path=os.path.dirname(dest_path), dest_filename=os.path.basename(dest_path))
+    aes_key = _to_bytes((dec[0]^dec[4], dec[1]^dec[5], dec[2]^dec[6], dec[3]^dec[7]))
+    iv_int = int.from_bytes(_to_bytes((dec[4], dec[5], 0, 0)), 'big')
+
+    # Get download URL from Mega API
+    url_api = f"https://g.api.mega.co.nz/cs?id={_SEQ}&n={root_handle}"
+    resp = _requests.post(url_api, json=[{"a": "g", "g": 1, "n": node_id}], timeout=30)
+    resp.raise_for_status()
+    result = resp.json()
+    if isinstance(result, int):
+        raise RuntimeError(f"Mega API error: {result}")
+    if isinstance(result[0], int):
+        raise RuntimeError(f"Mega download error: {result[0]}")
+    dl_url = result[0]["g"]
+
+    # Stream download with AES-128-CTR decryption
+    ctr = Counter.new(128, initial_value=iv_int)
+    cipher = AES.new(aes_key, AES.MODE_CTR, counter=ctr)
+
+    with _requests.get(dl_url, stream=True, timeout=600) as r:
+        r.raise_for_status()
+        with open(dest_path, 'wb') as f:
+            for chunk in r.iter_content(chunk_size=1 << 20):
+                if chunk:
+                    f.write(cipher.decrypt(chunk))
