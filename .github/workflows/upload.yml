@@ -28,8 +28,7 @@ jobs:
         env:
           GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
           GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python main.py
 
       - name: Commit updated state
