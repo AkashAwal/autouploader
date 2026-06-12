@@ -34,7 +34,7 @@ def get_credentials(token_env: str) -> Credentials:
     token_data = os.environ.get(token_env)
     if not token_data:
         raise RuntimeError(f"Environment variable '{token_env}' is not set.")
-    creds = Credentials.from_authorized_user_info(json.loads(token_data.lstrip('﻿')), SCOPES)
+    creds = Credentials.from_authorized_user_info(json.loads(token_data[token_data.index('{'):]), SCOPES)
     if creds.expired and creds.refresh_token:
         creds.refresh(Request())
     return creds
