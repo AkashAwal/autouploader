@@ -16,7 +16,8 @@ from uploader.state import (
     mark_uploaded,
     save_state,
 )
-from uploader.youtube import QuotaExceededError, upload_video
+from uploader.facebook import FacebookUploadError, upload_video as fb_upload_video
+from uploader.youtube import QuotaExceededError, upload_video as yt_upload_video
 
 
 def notify(subject: str, body: str) -> None:
@@ -78,14 +79,22 @@ def process_channel(channel: dict, state: dict) -> dict:
     folder_id = channel["drive_folder_id"]
     token_env = channel["token_env"]
     defaults = channel["defaults"]
+    platform = channel.get("platform", "youtube")
     max_uploads = channel.get("max_uploads_per_run")
     uploads_this_run = 0
 
-    print(f"\n=== {name} ===")
+    print(f"\n=== {name} ({platform}) ===")
 
     creds = get_credentials(token_env)
     drive = build("drive", "v3", credentials=creds)
-    youtube = build("youtube", "v3", credentials=creds)
+
+    if platform == "facebook":
+        fb_token = os.environ.get(channel["fb_token_env"])
+        if not fb_token:
+            raise RuntimeError(f"Environment variable '{channel['fb_token_env']}' is not set.")
+        fb_page_id = channel["fb_page_id"]
+    else:
+        youtube = build("youtube", "v3", credentials=creds)
 
     all_videos = list_videos(drive, folder_id)
     new_videos = [v for v in all_videos if not is_uploaded(state, v["id"])]
@@ -113,7 +122,12 @@ def process_channel(channel: dict, state: dict) -> dict:
 
             print(f"  [{file_name}] Uploading as '{title}'...")
             try:
-                yt_id = upload_video(youtube, dest, title, defaults)
+                if platform == "facebook":
+                    vid_id = fb_upload_video(fb_page_id, fb_token, dest, title, defaults)
+                    url = f"https://www.facebook.com/{fb_page_id}/videos/{vid_id}"
+                else:
+                    vid_id = yt_upload_video(youtube, dest, title, defaults)
+                    url = f"https://youtu.be/{vid_id}"
             except QuotaExceededError:
                 print("  YouTube daily quota reached. Stopping for today — will resume tomorrow.")
                 notify(
@@ -125,13 +139,13 @@ def process_channel(channel: dict, state: dict) -> dict:
                 print(f"  [{file_name}] Upload failed: {e}")
                 notify(
                     f"[{name}] Upload failed: {file_name}",
-                    f"Channel: {name}\nFile: {file_name}\nTitle: {title}\n\nReason:\n{e}",
+                    f"Channel: {name}\nPlatform: {platform}\nFile: {file_name}\nTitle: {title}\n\nReason:\n{e}",
                 )
                 raise
-            print(f"  [{file_name}] Done -> https://youtu.be/{yt_id}")
+            print(f"  [{file_name}] Done -> {url}")
             notify(
                 f"[{name}] Uploaded: {title}",
-                f"Channel: {name}\nTitle: {title}\nURL: https://youtu.be/{yt_id}",
+                f"Channel: {name}\nPlatform: {platform}\nTitle: {title}\nURL: {url}",
             )
 
             state = mark_uploaded(state, file_id, name)
