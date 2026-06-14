@@ -88,10 +88,24 @@
     "1sWCMXviMSFMfFzg9Clsgj3P_00gF9hL0",
     "1funks9rciykYfYg5jtipyFxciRIynTbt",
     "1kiemPRI8TD5qeOI39HmyYjLz_blknMp5",
-    "NztHEKxI"
+    "NztHEKxI",
+    "1DuvZUY3IxkAEwY030n5wYqCYbBKHWtUj",
+    "Aj1BGCQD"
   ],
   "channel_counts": {
-    "AI Tools": 88,
-    "Sigma Mindset Shorts": 1
-  }
+    "AI Tools": 89,
+    "Sigma Mindset Shorts": 2
+  },
+  "youtube_videos": [
+    {
+      "youtube_id": "YZRzau_Nymo",
+      "channel": "AI Tools",
+      "title": "How to Use AI to Build Multiple Income Streams"
+    },
+    {
+      "youtube_id": "DZ7RyTZunCM",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Mindset That Separates the Rich From the Poor"
+    }
+  ]
 }
