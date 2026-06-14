@@ -90,11 +90,13 @@
     "1kiemPRI8TD5qeOI39HmyYjLz_blknMp5",
     "NztHEKxI",
     "1DuvZUY3IxkAEwY030n5wYqCYbBKHWtUj",
-    "Aj1BGCQD"
+    "Aj1BGCQD",
+    "1Hf_m0JXry2XJUDiqvRsoMaWk1mqGRVZ4",
+    "9z0lQS5A"
   ],
   "channel_counts": {
-    "AI Tools": 89,
-    "Sigma Mindset Shorts": 2
+    "AI Tools": 90,
+    "Sigma Mindset Shorts": 3
   },
   "youtube_videos": [
     {
@@ -106,6 +108,16 @@
       "youtube_id": "DZ7RyTZunCM",
       "channel": "Sigma Mindset Shorts",
       "title": "The Mindset That Separates the Rich From the Poor"
+    },
+    {
+      "youtube_id": "roiIM6RqBqo",
+      "channel": "AI Tools",
+      "title": "AI Tools That Are Completely Free and Incredibly Powerful"
+    },
+    {
+      "youtube_id": "Edaz6IZrjzw",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Being Average and Start Getting Rich"
     }
   ]
 }
