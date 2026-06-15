@@ -9,11 +9,13 @@ def load_state() -> dict:
         data = json.loads(STATE_FILE.read_text())
         # migrate old flat-list format
         if isinstance(data, list):
-            return {"uploaded_ids": data, "channel_counts": {}, "youtube_videos": []}
-        if "youtube_videos" not in data:
-            data["youtube_videos"] = []
+            data = {"uploaded_ids": data, "channel_counts": {}}
+        data.setdefault("uploaded_ids", [])
+        data.setdefault("channel_counts", {})
+        data.setdefault("youtube_videos", [])
+        data.setdefault("daily_slots", {})
         return data
-    return {"uploaded_ids": [], "channel_counts": {}, "youtube_videos": []}
+    return {"uploaded_ids": [], "channel_counts": {}, "youtube_videos": [], "daily_slots": {}}
 
 
 def save_state(state: dict):
@@ -34,3 +36,24 @@ def mark_uploaded(state: dict, file_id: str, channel_name: str, youtube_id: str 
 
 def get_channel_count(state: dict, channel_name: str) -> int:
     return state["channel_counts"].get(channel_name, 0)
+
+
+def slot_filled(state: dict, channel_name: str, date: str, slot: str) -> bool:
+    return slot in state["daily_slots"].get(channel_name, {}).get(date, [])
+
+
+def mark_slot(state: dict, channel_name: str, date: str, slot: str) -> dict:
+    by_channel = state["daily_slots"].setdefault(channel_name, {})
+    filled = by_channel.setdefault(date, [])
+    if slot not in filled:
+        filled.append(slot)
+    return state
+
+
+def prune_slots(state: dict, keep_dates: set) -> dict:
+    """Drop slot records for days we no longer need, keeping the file small."""
+    for channel_name, by_date in list(state["daily_slots"].items()):
+        for date in list(by_date.keys()):
+            if date not in keep_dates:
+                del by_date[date]
+    return state

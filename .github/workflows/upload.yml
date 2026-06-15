@@ -1,13 +1,25 @@
 name: Upload Videos to YouTube
 
 on:
+  # Runs every 30 minutes across the active window (UTC). The uploader itself
+  # decides what to do based on IST slots (11:00 and 17:00 IST), so most runs
+  # are no-ops. Running often makes the schedule self-healing: if GitHub delays
+  # or drops a run, the next one fills the missed slot. The slot bookkeeping in
+  # uploaded.json guarantees at most 2 uploads per channel per day.
+  #   05:30 UTC = 11:00 IST (morning slot)
+  #   11:30 UTC = 17:00 IST (evening slot)
+  #   window 05:00-17:30 UTC = 10:30-23:00 IST (catch-up room)
   schedule:
-    - cron: "30 5 * * *"
-    - cron: "30 11 * * *"
+    - cron: "*/30 5-17 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# Never let two runs upload at the same time (avoids state races / double posts).
+concurrency:
+  group: uploader
+  cancel-in-progress: false
 
 jobs:
   upload:
@@ -41,5 +53,20 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add uploaded.json
-          git diff --cached --quiet || git commit -m "chore: update uploaded state [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update uploaded state [skip ci]"
+          # Robust push: rebase onto any concurrent changes and retry so a
+          # losing race never discards an upload we already performed.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying in 5s..."
+            sleep 5
+          done
+          echo "::error::Failed to push updated state after 5 attempts."
+          exit 1
