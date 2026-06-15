@@ -1,0 +1,14 @@
+{
+  "name": "autouploader-trigger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker that punctually triggers the autouploader GitHub workflow at 11:00 and 17:00 IST.",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.100.0"
+  }
+}
