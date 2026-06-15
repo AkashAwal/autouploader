@@ -2,6 +2,7 @@ import json
 import os
 import tempfile
 import traceback
+from datetime import timedelta
 from pathlib import Path
 
 from google.auth.transport.requests import Request
@@ -126,13 +127,25 @@ def process_channel(channel: dict, state: dict, date: str, pending_slots: list) 
     if not new_videos:
         print("  No new videos available in source.")
         notify(
-            f"[{name}] No new videos to upload",
-            f"Channel: {name}\nThe source folder has no un-uploaded videos left. "
-            f"Add more videos so scheduled slots can be filled.",
+            f"[{name}] Source empty — uploads will stop",
+            f"Channel: {name}\nThe source folder has no un-uploaded videos left.\n"
+            f"Add more videos immediately so scheduled slots can be filled.",
         )
         return state
 
-    print(f"  {len(new_videos)} new video(s) available; filling {len(pending_slots)} slot(s).")
+    remaining = len(new_videos)
+    LOW_STOCK_THRESHOLD = 7  # ~3.5 days at 2/day
+    if remaining <= LOW_STOCK_THRESHOLD:
+        days_left = remaining // 2
+        print(f"  WARNING: only {remaining} video(s) left (~{days_left} day(s) of runway).")
+        notify(
+            f"[{name}] Low video stock — {remaining} left (~{days_left} day(s))",
+            f"Channel: {name}\nOnly {remaining} un-uploaded video(s) remain in the source folder.\n"
+            f"That is approximately {days_left} day(s) of uploads at 2/day.\n\n"
+            f"Add more videos soon to avoid gaps.",
+        )
+
+    print(f"  {remaining} new video(s) available; filling {len(pending_slots)} slot(s).")
 
     queue = list(new_videos)
     with tempfile.TemporaryDirectory() as tmp:
@@ -209,9 +222,12 @@ def main():
     due = due_slots(now)
     print(f"Now (IST): {now:%Y-%m-%d %H:%M}  |  Date: {date}  |  Due slots: {due or 'none'}")
 
+    yesterday = (now.date() - timedelta(days=1)).isoformat()
+    keep_dates = {yesterday, date}
+
     if not due:
         print("No slots are due yet today. Nothing to do.")
-        save_state(prune_slots(state, {date}))
+        save_state(prune_slots(state, keep_dates))
         return
 
     for channel in channels:
@@ -232,7 +248,7 @@ def main():
                 f"Channel: {name}\n\n{e}\n\n{traceback.format_exc()}",
             )
 
-    save_state(prune_slots(state, {date}))
+    save_state(prune_slots(state, keep_dates))
     print("\nAll channels processed.")
 
 

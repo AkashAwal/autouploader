@@ -51,8 +51,8 @@ def mark_slot(state: dict, channel_name: str, date: str, slot: str) -> dict:
 
 
 def prune_slots(state: dict, keep_dates: set) -> dict:
-    """Drop slot records for days we no longer need, keeping the file small."""
-    for channel_name, by_date in list(state["daily_slots"].items()):
+    """Drop slot records older than keep_dates, keeping the file small."""
+    for by_date in state["daily_slots"].values():
         for date in list(by_date.keys()):
             if date not in keep_dates:
                 del by_date[date]
