@@ -8,9 +8,12 @@ on:
   # uploaded.json guarantees at most 2 uploads per channel per day.
   #   05:30 UTC = 11:00 IST (morning slot)
   #   11:30 UTC = 17:00 IST (evening slot)
-  #   window 05:00-17:30 UTC = 10:30-23:00 IST (catch-up room)
+  #   window 05:00-17:32 UTC = 10:30-23:02 IST (catch-up room)
+  # NOTE: Offset by 2 minutes (:02/:32) so this backup cron never fires at
+  # exactly the same second as the Cloudflare Worker (:30) or local task
+  # (:00 IST = :30 UTC), preventing 3-way simultaneous dispatch collisions.
   schedule:
-    - cron: "*/30 5-17 * * *"
+    - cron: "2,32 5-17 * * *"
   workflow_dispatch:
 
 permissions:
@@ -47,7 +50,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           MEGA_EMAIL: ${{ secrets.MEGA_EMAIL }}
           MEGA_PASSWORD: ${{ secrets.MEGA_PASSWORD }}
-        run: python main.py
+        run: python3 main.py
 
       - name: Commit updated state
         if: always()
@@ -59,15 +62,36 @@ jobs:
             echo "No state changes to commit."
             exit 0
           fi
+
+          # Snapshot what our run uploaded so merge_state.py can reference it
+          # even after we reset to origin/main on a retry.
+          cp uploaded.json /tmp/local_uploaded.json
+
           git commit -m "chore: update uploaded state [skip ci]"
-          # Robust push: rebase onto any concurrent changes and retry so a
-          # losing race never discards an upload we already performed.
+
+          # Robust push: on conflict, reset to remote then re-merge our new
+          # entries using merge_state.py (Python merge avoids git rebase
+          # conflicts that occur when two runs both append to a JSON array).
           for attempt in 1 2 3 4 5; do
-            if git pull --rebase --autostash origin main && git push; then
+            if git push; then
               echo "Pushed on attempt $attempt."
               exit 0
             fi
-            echo "Push attempt $attempt failed; retrying in 5s..."
+            echo "Push attempt $attempt failed; merging with remote and retrying..."
+            git fetch origin main
+            git reset --hard origin/main
+            python3 merge_state.py
+            merge_exit=$?
+            if [ $merge_exit -eq 2 ]; then
+              echo "Remote already contains our uploads. Nothing left to push."
+              exit 0
+            fi
+            git add uploaded.json
+            if git diff --cached --quiet; then
+              echo "No new changes after merge. Nothing to push."
+              exit 0
+            fi
+            git commit -m "chore: update uploaded state [skip ci]"
             sleep 5
           done
           echo "::error::Failed to push updated state after 5 attempts."
