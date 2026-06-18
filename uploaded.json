@@ -104,11 +104,15 @@
     "1YUoPxTOO8pIL9N8N_yzzCu6ysIHWQaJY",
     "Fz0BmSCY",
     "1yd6clQ_nhaVw6sH9x4kC2bfWjbiLbVBc",
-    "EykzCazJ"
+    "EykzCazJ",
+    "1CJZ7kra04RoMFZwYjHt3SZszoRGuRGi3",
+    "En0FyAgK",
+    "1fdXOVOFlna--VszZGo3xyZCql_hMWXvd",
+    "B71TVIYC"
   ],
   "channel_counts": {
-    "AI Tools": 96,
-    "Sigma Mindset Shorts": 9
+    "AI Tools": 98,
+    "Sigma Mindset Shorts": 11
   },
   "youtube_videos": [
     {
@@ -190,25 +194,45 @@
       "youtube_id": "0g6vSo7IILk",
       "channel": "Sigma Mindset Shorts",
       "title": "Cut Off Low Value People and Watch Your Life Change"
+    },
+    {
+      "youtube_id": "1266Bhqzi2k",
+      "channel": "AI Tools",
+      "title": "Free AI Tools to Grow Your Business Fast"
+    },
+    {
+      "youtube_id": "m5qqF05wcpg",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Focus on Yourself and the Money Will Follow"
+    },
+    {
+      "youtube_id": "stZQk2xpBzA",
+      "channel": "AI Tools",
+      "title": "AI Tools to Work Smarter Not Harder in 2026"
+    },
+    {
+      "youtube_id": "Bi6jyddchSw",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Most People Will Never Be Wealthy"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-06-16": [
+      "2026-06-17": [
         "morning",
         "evening"
       ],
-      "2026-06-17": [
+      "2026-06-18": [
         "morning",
         "evening"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-06-16": [
+      "2026-06-17": [
         "morning",
         "evening"
       ],
-      "2026-06-17": [
+      "2026-06-18": [
         "morning",
         "evening"
       ]
