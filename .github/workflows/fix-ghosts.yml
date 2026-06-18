@@ -1,0 +1,39 @@
+name: Fix Ghost Uploads (one-off)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install "pycryptodome>=3.9.6"
+
+      - name: Run ghost reconciliation
+        env:
+          GOOGLE_TOKEN_CH1: ${{ secrets.GOOGLE_TOKEN_CH1 }}
+          GOOGLE_TOKEN_CH2: ${{ secrets.GOOGLE_TOKEN_CH2 }}
+        run: python fix_ghosts.py
+
+      - name: Commit reconciled state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add uploaded.json
+          git diff --cached --quiet && echo "Nothing to commit." && exit 0
+          git commit -m "fix: reconcile 8 ghost uploads from June 16-18 race condition [skip ci]"
+          git pull --rebase --autostash origin main && git push
