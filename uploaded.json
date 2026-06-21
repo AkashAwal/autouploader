@@ -116,11 +116,13 @@
     "11BtcIdoh4CWwqRQ3oO96IGzECNdOHGLu",
     "028lAAQK",
     "1YP61JZMYFIKM_XLiyYZWIxOm_tswDykF",
-    "8q9X3KzQ"
+    "8q9X3KzQ",
+    "1Cp-bH4NR_xJNXEMCmxCt7btFEzXt0WMv",
+    "cu0lDIqb"
   ],
   "channel_counts": {
-    "AI Tools": 102,
-    "Sigma Mindset Shorts": 15
+    "AI Tools": 103,
+    "Sigma Mindset Shorts": 16
   },
   "youtube_videos": [
     {
@@ -302,6 +304,16 @@
       "youtube_id": "XbERtYA_JGI",
       "channel": "Sigma Mindset Shorts",
       "title": "This Is What Real Discipline Looks Like"
+    },
+    {
+      "youtube_id": "z8k530N2pHU",
+      "channel": "AI Tools",
+      "title": "AI Tools Every Freelancer Needs Right Now"
+    },
+    {
+      "youtube_id": "VcavnYLQ5I8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "You Are One Decision Away From Changing Your Life"
     }
   ],
   "daily_slots": {
@@ -309,12 +321,18 @@
       "2026-06-20": [
         "morning",
         "evening"
+      ],
+      "2026-06-21": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-06-20": [
         "morning",
         "evening"
+      ],
+      "2026-06-21": [
+        "morning"
       ]
     }
   }
