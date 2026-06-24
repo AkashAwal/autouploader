@@ -130,11 +130,13 @@
     "1A5toJhO9aVAmMbvmWA2sqU1IG5H_ZY7L",
     "EytVAIpS",
     "1DDOiUmeU0_iEKPhZADHuFllfM3ljhuIS",
-    "FvlVzYqa"
+    "FvlVzYqa",
+    "1wTLmqliKWuFbY1j1hR70EXrrvz1LnuBO",
+    "920XFS7Z"
   ],
   "channel_counts": {
-    "AI Tools": 109,
-    "Sigma Mindset Shorts": 22
+    "AI Tools": 110,
+    "Sigma Mindset Shorts": 23
   },
   "youtube_videos": [
     {
@@ -386,6 +388,16 @@
       "youtube_id": "bSGCwEOWuZU",
       "channel": "Sigma Mindset Shorts",
       "title": "Women Respect Men Who Have These Qualities"
+    },
+    {
+      "youtube_id": "2gjH0jF3m0E",
+      "channel": "AI Tools",
+      "title": "The Future of Business Is AI and Here Is Why"
+    },
+    {
+      "youtube_id": "EKbTOSip0jQ",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Build Yourself Before You Build Anything Else"
     }
   ],
   "daily_slots": {
@@ -395,7 +407,8 @@
         "evening"
       ],
       "2026-06-24": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -404,7 +417,8 @@
         "evening"
       ],
       "2026-06-24": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
