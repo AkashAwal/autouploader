@@ -140,11 +140,13 @@
     "1b-rR7pFpXQHrdaTw_hE-5JGJb_--MjPx",
     "9u1lESJD",
     "1onJ1b46WHTCtgkXaAtz2oy_pYKV974NA",
-    "VzszlCwT"
+    "VzszlCwT",
+    "1yt_sdpr76SVSRvjzG_ynVEcvkhUj4EOh",
+    "4ykH3aqD"
   ],
   "channel_counts": {
-    "AI Tools": 114,
-    "Sigma Mindset Shorts": 27
+    "AI Tools": 115,
+    "Sigma Mindset Shorts": 28
   },
   "youtube_videos": [
     {
@@ -446,6 +448,16 @@
       "youtube_id": "IzUgMhP2NgU",
       "channel": "Sigma Mindset Shorts",
       "title": "Your Mindset Is Your Net Worth"
+    },
+    {
+      "youtube_id": "FoK0M7WRG2I",
+      "channel": "AI Tools",
+      "title": "The Most Powerful AI Tools of 2026"
+    },
+    {
+      "youtube_id": "AGjFuf5bEzk",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How to Attract Wealth Through Discipline"
     }
   ],
   "daily_slots": {
@@ -453,12 +465,18 @@
       "2026-06-26": [
         "morning",
         "evening"
+      ],
+      "2026-06-27": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-06-26": [
         "morning",
         "evening"
+      ],
+      "2026-06-27": [
+        "morning"
       ]
     }
   }
