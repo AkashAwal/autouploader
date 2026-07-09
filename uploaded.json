@@ -188,11 +188,13 @@
     "1QPnPOk8nnChjdyCUSqTOwfvkwEAe21sA",
     "0y0FVArD",
     "1gKUxL2Ms6QVGQRtNtUIAJRNs5qtr30zK",
-    "d6tHRASD"
+    "d6tHRASD",
+    "1slNWJ3F44dSrk5rCh0BSjRxjDHVggk5q",
+    "ImtDlQ5S"
   ],
   "channel_counts": {
-    "AI Tools": 138,
-    "Sigma Mindset Shorts": 51
+    "AI Tools": 139,
+    "Sigma Mindset Shorts": 52
   },
   "youtube_videos": [
     {
@@ -734,27 +736,35 @@
       "youtube_id": "QpuA4mGD9gE",
       "channel": "Sigma Mindset Shorts",
       "title": "Why Most People Will Never Be Wealthy"
+    },
+    {
+      "youtube_id": "gKrAa9qSoYM",
+      "channel": "AI Tools",
+      "title": "AI Tools You Should Start Using Today"
+    },
+    {
+      "youtube_id": "PXauCPzYlQ8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Habits of Men Who Win in Life"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-07-07": [
-        "morning",
-        "evening"
-      ],
       "2026-07-08": [
         "morning",
         "evening"
+      ],
+      "2026-07-09": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-07-07": [
-        "morning",
-        "evening"
-      ],
       "2026-07-08": [
         "morning",
         "evening"
+      ],
+      "2026-07-09": [
+        "morning"
       ]
     }
   }
