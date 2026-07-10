@@ -192,10 +192,11 @@
     "1slNWJ3F44dSrk5rCh0BSjRxjDHVggk5q",
     "ImtDlQ5S",
     "1W8J57qpIgwZ9IXbImpXg6eDUdZqXbwP2",
-    "BmlFAAjA"
+    "BmlFAAjA",
+    "1bHIwetKHD0dkET5EtPa5XorPliw4gql0"
   ],
   "channel_counts": {
-    "AI Tools": 140,
+    "AI Tools": 141,
     "Sigma Mindset Shorts": 53
   },
   "youtube_videos": [
@@ -758,24 +759,24 @@
       "youtube_id": "EN5IIQ2asQs",
       "channel": "Sigma Mindset Shorts",
       "title": "Stop Wasting Time and Start Building Wealth"
+    },
+    {
+      "youtube_id": "orwKt-6vyOI",
+      "channel": "AI Tools",
+      "title": "AI Tools That Save You Hours Every Single Day"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-07-08": [
-        "morning",
-        "evening"
-      ],
       "2026-07-09": [
         "morning",
         "evening"
+      ],
+      "2026-07-10": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-07-08": [
-        "morning",
-        "evening"
-      ],
       "2026-07-09": [
         "morning",
         "evening"
