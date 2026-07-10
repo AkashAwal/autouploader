@@ -193,11 +193,12 @@
     "ImtDlQ5S",
     "1W8J57qpIgwZ9IXbImpXg6eDUdZqXbwP2",
     "BmlFAAjA",
-    "1bHIwetKHD0dkET5EtPa5XorPliw4gql0"
+    "1bHIwetKHD0dkET5EtPa5XorPliw4gql0",
+    "t38DGQBZ"
   ],
   "channel_counts": {
     "AI Tools": 141,
-    "Sigma Mindset Shorts": 53
+    "Sigma Mindset Shorts": 54
   },
   "youtube_videos": [
     {
@@ -764,6 +765,11 @@
       "youtube_id": "orwKt-6vyOI",
       "channel": "AI Tools",
       "title": "AI Tools That Save You Hours Every Single Day"
+    },
+    {
+      "youtube_id": "AZlDeSViXco",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Quality Over Quantity When It Comes to Friends"
     }
   ],
   "daily_slots": {
@@ -780,6 +786,9 @@
       "2026-07-09": [
         "morning",
         "evening"
+      ],
+      "2026-07-10": [
+        "morning"
       ]
     }
   }
