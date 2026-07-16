@@ -218,11 +218,13 @@
     "1J7mCbpzIqglHfVOYaHwWAfz5Llaelx08",
     "ButXXYpS",
     "1IPQv6X3XNjYI3CKWfuYHH3E5rfMJ8o_W",
-    "1rsVXSqI"
+    "1rsVXSqI",
+    "1dj5at3ANBY8q2JdvAUrR5NY5OybY7bbU",
+    "w2l1QKTb"
   ],
   "channel_counts": {
-    "AI Tools": 153,
-    "Sigma Mindset Shorts": 66
+    "AI Tools": 154,
+    "Sigma Mindset Shorts": 67
   },
   "youtube_videos": [
     {
@@ -914,6 +916,16 @@
       "youtube_id": "26KTT2Nvg2I",
       "channel": "Sigma Mindset Shorts",
       "title": "Real Men Build Empires Not Excuses"
+    },
+    {
+      "youtube_id": "Ai84_WH8HoA",
+      "channel": "AI Tools",
+      "title": "How to Make Money Online Using AI"
+    },
+    {
+      "youtube_id": "J23BAPCK5F0",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Your Mindset Is Your Net Worth"
     }
   ],
   "daily_slots": {
@@ -923,7 +935,8 @@
         "evening"
       ],
       "2026-07-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -932,7 +945,8 @@
         "evening"
       ],
       "2026-07-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
