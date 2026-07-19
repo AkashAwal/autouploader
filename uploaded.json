@@ -228,11 +228,13 @@
     "1V-bD2ulumgZxL6KcUQwBrEJ-u2Gk324M",
     "km0hVKTR",
     "1sPZFYMN3eipns1cXoBhAjAkt1eZtmAiG",
-    "svsXGSaZ"
+    "svsXGSaZ",
+    "1phelNi8KTv4brhUrjDUozy2aJo1V_be1",
+    "4r9FxCqK"
   ],
   "channel_counts": {
-    "AI Tools": 158,
-    "Sigma Mindset Shorts": 71
+    "AI Tools": 159,
+    "Sigma Mindset Shorts": 72
   },
   "youtube_videos": [
     {
@@ -974,27 +976,35 @@
       "youtube_id": "SyMmI6Hx2AI",
       "channel": "Sigma Mindset Shorts",
       "title": "Why Broke People Have Broke Friends"
+    },
+    {
+      "youtube_id": "ea2w0XMBnks",
+      "channel": "AI Tools",
+      "title": "The Best AI Tools Nobody Is Talking About"
+    },
+    {
+      "youtube_id": "ENfbGL-JJfA",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Silent Moves That Build Real Wealth"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-07-17": [
-        "morning",
-        "evening"
-      ],
       "2026-07-18": [
         "morning",
         "evening"
+      ],
+      "2026-07-19": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-07-17": [
-        "morning",
-        "evening"
-      ],
       "2026-07-18": [
         "morning",
         "evening"
+      ],
+      "2026-07-19": [
+        "morning"
       ]
     }
   }
