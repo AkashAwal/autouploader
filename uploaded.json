@@ -256,11 +256,13 @@
     "1v-QKJMRZqOBQioKk8lLUr4rBIi-4rEIZ",
     "Zj9j2AIZ",
     "1avQY4WV_fxa_CP1yqW7RdxgQyNmDzSj-",
-    "pjl12AKA"
+    "pjl12AKA",
+    "1BFegIPhpwYg5a0Xg9yeZqLI2ENg9C-qE",
+    "Jm9DkYwB"
   ],
   "channel_counts": {
-    "AI Tools": 172,
-    "Sigma Mindset Shorts": 85
+    "AI Tools": 173,
+    "Sigma Mindset Shorts": 86
   },
   "youtube_videos": [
     {
@@ -1142,6 +1144,16 @@
       "youtube_id": "O3-PBCCtJhY",
       "channel": "Sigma Mindset Shorts",
       "title": "Your Circle Is Keeping You Poor"
+    },
+    {
+      "youtube_id": "8oYDhlMb7Rs",
+      "channel": "AI Tools",
+      "title": "AI Tools That Every Content Creator Must Know"
+    },
+    {
+      "youtube_id": "trpqFxkmDow",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How to Get Your Life Together in 30 Days"
     }
   ],
   "daily_slots": {
@@ -1149,12 +1161,18 @@
       "2026-07-25": [
         "morning",
         "evening"
+      ],
+      "2026-07-26": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-07-25": [
         "morning",
         "evening"
+      ],
+      "2026-07-26": [
+        "morning"
       ]
     }
   }
