@@ -266,11 +266,13 @@
     "1xEvumfZN0JRxNhW1xQTFuCshcqF5YIew",
     "Q2k10A6D",
     "1nm0fF3oYT_AremwAdWM7bSCwxosIx4ns",
-    "1usBAIDB"
+    "1usBAIDB",
+    "1_azP_e-w-78l-uynZ5RLm7V3va87dKkb",
+    "8r81xKrb"
   ],
   "channel_counts": {
-    "AI Tools": 177,
-    "Sigma Mindset Shorts": 90
+    "AI Tools": 178,
+    "Sigma Mindset Shorts": 91
   },
   "youtube_videos": [
     {
@@ -1202,6 +1204,16 @@
       "youtube_id": "WYPzMC4dWdY",
       "channel": "Sigma Mindset Shorts",
       "title": "Focus on Yourself and the Money Will Follow"
+    },
+    {
+      "youtube_id": "yRQtIBPkg3I",
+      "channel": "AI Tools",
+      "title": "AI Tools for Beginners That Actually Work"
+    },
+    {
+      "youtube_id": "XxQu7tITaoc",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Most People Will Never Be Wealthy"
     }
   ],
   "daily_slots": {
@@ -1211,7 +1223,8 @@
         "evening"
       ],
       "2026-07-28": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1220,7 +1233,8 @@
         "evening"
       ],
       "2026-07-28": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
