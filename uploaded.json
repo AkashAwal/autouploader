@@ -272,11 +272,13 @@
     "1JEs93ElykJmYgPJi6MCcHA89xl2h82ac",
     "0i1DHQ7A",
     "1Bb3NE2oajxIAEXMImNY84fDgtAQ2jZDg",
-    "Ar1nQY5Q"
+    "Ar1nQY5Q",
+    "1rOVKO986kMk_DB_QSEaFBPZBlCb4URG4",
+    "1n9BHSQL"
   ],
   "channel_counts": {
-    "AI Tools": 180,
-    "Sigma Mindset Shorts": 93
+    "AI Tools": 181,
+    "Sigma Mindset Shorts": 94
   },
   "youtube_videos": [
     {
@@ -1238,27 +1240,35 @@
       "youtube_id": "QACV_RSYh3I",
       "channel": "Sigma Mindset Shorts",
       "title": "Stop Wasting Time and Start Building Wealth"
+    },
+    {
+      "youtube_id": "jXn2XO5sxjc",
+      "channel": "AI Tools",
+      "title": "AI Tools You Need to Know in 2026"
+    },
+    {
+      "youtube_id": "dpXkt417804",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Quality Over Quantity When It Comes to Friends"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-07-28": [
-        "morning",
-        "evening"
-      ],
       "2026-07-29": [
         "morning",
         "evening"
+      ],
+      "2026-07-30": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-07-28": [
-        "morning",
-        "evening"
-      ],
       "2026-07-29": [
         "morning",
         "evening"
+      ],
+      "2026-07-30": [
+        "morning"
       ]
     }
   }
