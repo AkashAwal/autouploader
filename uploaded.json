@@ -306,11 +306,13 @@
     "1_UPXc9sIg59y3-E4krHZEKJH1PuSIe71",
     "h39xXATJ",
     "1z7ha1hemvF7bKuGq4JCd1VwpoFeQzHGV",
-    "py0R1YBL"
+    "py0R1YBL",
+    "1LD3ngULDrisRDNXWrvpUVAYJ_NhtNLAr",
+    "lys3yApa"
   ],
   "channel_counts": {
-    "AI Tools": 197,
-    "Sigma Mindset Shorts": 110
+    "AI Tools": 198,
+    "Sigma Mindset Shorts": 111
   },
   "youtube_videos": [
     {
@@ -1442,6 +1444,16 @@
       "youtube_id": "q9nASb1MiSU",
       "channel": "Sigma Mindset Shorts",
       "title": "Get Obsessed With Your Goals or Stay Average"
+    },
+    {
+      "youtube_id": "aMy8YlqYzO8",
+      "channel": "AI Tools",
+      "title": "How Students Can Use AI to Earn Money Online"
+    },
+    {
+      "youtube_id": "SDhis7k3ap4",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Broke People Have Broke Friends"
     }
   ],
   "daily_slots": {
@@ -1451,7 +1463,8 @@
         "evening"
       ],
       "2026-08-07": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1460,7 +1473,8 @@
         "evening"
       ],
       "2026-08-07": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
