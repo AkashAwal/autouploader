@@ -326,11 +326,13 @@
     "1TBtoe1eSDOman3C4gp16tbLkTTc2h5ms",
     "8q9RFSIY",
     "1KtiDHda4CDBfc5o6fBXZ37mqoLnGsUSY",
-    "hjkh2K7I"
+    "hjkh2K7I",
+    "10NOL25pTVewN0FOfYhakreVeXvDj3KJu",
+    "Z2tFRQCZ"
   ],
   "channel_counts": {
-    "AI Tools": 207,
-    "Sigma Mindset Shorts": 120
+    "AI Tools": 208,
+    "Sigma Mindset Shorts": 121
   },
   "youtube_videos": [
     {
@@ -1562,6 +1564,16 @@
       "youtube_id": "oPvnCBelRYo",
       "channel": "Sigma Mindset Shorts",
       "title": "Get Uncomfortable or Stay Broke Forever"
+    },
+    {
+      "youtube_id": "IJfCnReDhkc",
+      "channel": "AI Tools",
+      "title": "AI Tools for Beginners That Actually Work"
+    },
+    {
+      "youtube_id": "Os5sWxvWL8c",
+      "channel": "Sigma Mindset Shorts",
+      "title": "This Is Why You Are Still Broke"
     }
   ],
   "daily_slots": {
@@ -1571,7 +1583,8 @@
         "evening"
       ],
       "2026-08-12": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1580,7 +1593,8 @@
         "evening"
       ],
       "2026-08-12": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
