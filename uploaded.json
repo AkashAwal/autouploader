@@ -338,11 +338,13 @@
     "1DMBYN8wWWR42JbtwoUf6BdOy2-WdLIOX",
     "NrlRzYQY",
     "1lCi2p1p0LMxY-fZUWL2t5ngmxDfjt2Cm",
-    "l70XBICT"
+    "l70XBICT",
+    "1k15DtFMgkaHSJ5MSH9TBs921JgpLONd8",
+    "wy8VDQJb"
   ],
   "channel_counts": {
-    "AI Tools": 213,
-    "Sigma Mindset Shorts": 126
+    "AI Tools": 214,
+    "Sigma Mindset Shorts": 127
   },
   "youtube_videos": [
     {
@@ -1634,6 +1636,16 @@
       "youtube_id": "ZiIuLayY2u0",
       "channel": "Sigma Mindset Shorts",
       "title": "How to Get Your Life Together in 30 Days"
+    },
+    {
+      "youtube_id": "b56EYykqOdE",
+      "channel": "AI Tools",
+      "title": "How to Make Money Online Using AI"
+    },
+    {
+      "youtube_id": "TcCTYN4wfLo",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Rich People Think Like This and Poor People Do Not"
     }
   ],
   "daily_slots": {
@@ -1643,7 +1655,8 @@
         "evening"
       ],
       "2026-08-15": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1652,7 +1665,8 @@
         "evening"
       ],
       "2026-08-15": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
