@@ -340,11 +340,13 @@
     "1lCi2p1p0LMxY-fZUWL2t5ngmxDfjt2Cm",
     "l70XBICT",
     "1k15DtFMgkaHSJ5MSH9TBs921JgpLONd8",
-    "wy8VDQJb"
+    "wy8VDQJb",
+    "17Rah4jEyolN-ut9CEz-TTAFjYw42Fu4F",
+    "FyslACiY"
   ],
   "channel_counts": {
-    "AI Tools": 214,
-    "Sigma Mindset Shorts": 127
+    "AI Tools": 215,
+    "Sigma Mindset Shorts": 128
   },
   "youtube_videos": [
     {
@@ -1646,27 +1648,35 @@
       "youtube_id": "TcCTYN4wfLo",
       "channel": "Sigma Mindset Shorts",
       "title": "Rich People Think Like This and Poor People Do Not"
+    },
+    {
+      "youtube_id": "Ds7NYVhe7Rw",
+      "channel": "AI Tools",
+      "title": "AI Tools That Will Change Your Life in 2026"
+    },
+    {
+      "youtube_id": "PFXRQpFQyuM",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Truth About Making Money Nobody Tells You"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-08-14": [
-        "morning",
-        "evening"
-      ],
       "2026-08-15": [
         "morning",
         "evening"
+      ],
+      "2026-08-16": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-08-14": [
-        "morning",
-        "evening"
-      ],
       "2026-08-15": [
         "morning",
         "evening"
+      ],
+      "2026-08-16": [
+        "morning"
       ]
     }
   }
