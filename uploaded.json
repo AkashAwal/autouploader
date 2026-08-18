@@ -350,11 +350,13 @@
     "10b1ZE90OE_MUxEDjH33rKanOgCrHkL5x",
     "wu8hAQ4A",
     "1T12MmBxk69MbQcLkU84URaX0uHtP_XFv",
-    "sz1jGKJT"
+    "sz1jGKJT",
+    "1IBibEQ7hWX_ZdMvF67uFgqHeX8LG1w9K",
+    "cqsxgISI"
   ],
   "channel_counts": {
-    "AI Tools": 219,
-    "Sigma Mindset Shorts": 132
+    "AI Tools": 220,
+    "Sigma Mindset Shorts": 133
   },
   "youtube_videos": [
     {
@@ -1706,6 +1708,16 @@
       "youtube_id": "xIyzzUkCfCA",
       "channel": "Sigma Mindset Shorts",
       "title": "The Habits of Men Who Win in Life"
+    },
+    {
+      "youtube_id": "M-IFx_bCKpc",
+      "channel": "AI Tools",
+      "title": "How to Start a Business From Home With AI"
+    },
+    {
+      "youtube_id": "2TelOOae-l8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Wasting Time and Start Building Wealth"
     }
   ],
   "daily_slots": {
@@ -1715,7 +1727,8 @@
         "evening"
       ],
       "2026-08-18": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1724,7 +1737,8 @@
         "evening"
       ],
       "2026-08-18": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
