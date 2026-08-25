@@ -378,11 +378,13 @@
     "1R_qruztSWh7OFkmYcz9-lLLp2ZeMXJLH",
     "1mtRCAjS",
     "1MySUElCK11IOGFZWTyGXsNsfBMZu-7Dy",
-    "1nkjnIKK"
+    "1nkjnIKK",
+    "1olLQrQby3X8qQauHgYeYAYM_NGiVZabi",
+    "EysHlYJS"
   ],
   "channel_counts": {
-    "AI Tools": 233,
-    "Sigma Mindset Shorts": 146
+    "AI Tools": 234,
+    "Sigma Mindset Shorts": 147
   },
   "youtube_videos": [
     {
@@ -1874,6 +1876,16 @@
       "youtube_id": "vjFpdd_6XmU",
       "channel": "Sigma Mindset Shorts",
       "title": "Real Men Build Empires Not Excuses"
+    },
+    {
+      "youtube_id": "gL_MjbopGdM",
+      "channel": "AI Tools",
+      "title": "How AI Is Helping People Quit Their 9 to 5"
+    },
+    {
+      "youtube_id": "g6_G66yBMGc",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Your Mindset Is Your Net Worth"
     }
   ],
   "daily_slots": {
@@ -1883,7 +1895,8 @@
         "evening"
       ],
       "2026-08-25": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -1892,7 +1905,8 @@
         "evening"
       ],
       "2026-08-25": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
