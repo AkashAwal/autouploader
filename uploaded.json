@@ -384,11 +384,13 @@
     "1myOln2nilPSYjS558zq1EYmH-8fYPbF3",
     "A20RjYiY",
     "12gQoZs3KMKgoufsq_QvPdT4Lqh-Z4ETe",
-    "5791laYI"
+    "5791laYI",
+    "1LtiSDd5NS841kUxVtX7N0tpRr2aSrQJJ",
+    "N3tDGQ5D"
   ],
   "channel_counts": {
-    "AI Tools": 236,
-    "Sigma Mindset Shorts": 149
+    "AI Tools": 237,
+    "Sigma Mindset Shorts": 150
   },
   "youtube_videos": [
     {
@@ -1910,27 +1912,35 @@
       "youtube_id": "CkBQIWDkb0w",
       "channel": "Sigma Mindset Shorts",
       "title": "The Power of Saying No to the Wrong People"
+    },
+    {
+      "youtube_id": "fb2hnZRKIMY",
+      "channel": "AI Tools",
+      "title": "Learn These AI Tools Before Everyone Else Does"
+    },
+    {
+      "youtube_id": "AMbFqQHj4I8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Get Obsessed With Your Goals or Stay Average"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-08-25": [
-        "morning",
-        "evening"
-      ],
       "2026-08-26": [
         "morning",
         "evening"
+      ],
+      "2026-08-27": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-08-25": [
-        "morning",
-        "evening"
-      ],
       "2026-08-26": [
         "morning",
         "evening"
+      ],
+      "2026-08-27": [
+        "morning"
       ]
     }
   }
