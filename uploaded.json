@@ -402,11 +402,13 @@
     "11-aRdBHA5jV5xwWhj8M4QwZ0crsZXRtz",
     "li8z3SiZ",
     "1whZt5R-Z5OLLvh3db5QRX6t4m-K6O4HU",
-    "13kTjYDZ"
+    "13kTjYDZ",
+    "1E4-wXd-kP9GHKZitEFkaX8vgtg_8M8Qa",
+    "UitVlaaQ"
   ],
   "channel_counts": {
-    "AI Tools": 245,
-    "Sigma Mindset Shorts": 158
+    "AI Tools": 246,
+    "Sigma Mindset Shorts": 159
   },
   "youtube_videos": [
     {
@@ -2018,6 +2020,16 @@
       "youtube_id": "YUnRACfCT0Q",
       "channel": "Sigma Mindset Shorts",
       "title": "The Qualities of a High Value Man"
+    },
+    {
+      "youtube_id": "Ne8iosuS-fo",
+      "channel": "AI Tools",
+      "title": "Top AI Tools Every Entrepreneur Must Use"
+    },
+    {
+      "youtube_id": "Ax4LPg1L-q4",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Surround Yourself With Winners or Stay Losing"
     }
   ],
   "daily_slots": {
@@ -2027,7 +2039,8 @@
         "evening"
       ],
       "2026-08-31": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2036,7 +2049,8 @@
         "evening"
       ],
       "2026-08-31": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
