@@ -418,11 +418,13 @@
     "1kBKCfg1AZzwj7NjhD6Ni01-iMxvLie2C",
     "Yz1j1IgD",
     "1oE_ll2M_Ew4GwJWnkTFOmdK-9DjvrRyW",
-    "hns3iA4B"
+    "hns3iA4B",
+    "1LneHl9pJLMvN8PblwFLvbLSN7L6nZTMR",
+    "Uys3UKRZ"
   ],
   "channel_counts": {
-    "AI Tools": 253,
-    "Sigma Mindset Shorts": 166
+    "AI Tools": 254,
+    "Sigma Mindset Shorts": 167
   },
   "youtube_videos": [
     {
@@ -2124,6 +2126,16 @@
       "youtube_id": "E-DdmGxti2E",
       "channel": "Sigma Mindset Shorts",
       "title": "How to Get Your Life Together in 30 Days"
+    },
+    {
+      "youtube_id": "R8DEQN3jVH4",
+      "channel": "AI Tools",
+      "title": "Build a Business With AI and Zero Experience"
+    },
+    {
+      "youtube_id": "Kn_5iDJGKN4",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Rich People Think Like This and Poor People Do Not"
     }
   ],
   "daily_slots": {
@@ -2133,7 +2145,8 @@
         "evening"
       ],
       "2026-09-04": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2142,7 +2155,8 @@
         "evening"
       ],
       "2026-09-04": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
