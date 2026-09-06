@@ -426,11 +426,13 @@
     "1xd_n-80VO27O92C_OKFnDEuBeznrc6_-",
     "sitHwATB",
     "1w3vx_-n-mlMSDe16SFXxuCrXlKUoL0KM",
-    "97tRjCRK"
+    "97tRjCRK",
+    "1T3RMSD3uhiBTtCcVucp2SQSuOZx_Oooa",
+    "820T1SSa"
   ],
   "channel_counts": {
-    "AI Tools": 257,
-    "Sigma Mindset Shorts": 170
+    "AI Tools": 258,
+    "Sigma Mindset Shorts": 171
   },
   "youtube_videos": [
     {
@@ -2172,6 +2174,16 @@
       "youtube_id": "6NtBjE7nYHM",
       "channel": "Sigma Mindset Shorts",
       "title": "Focus on Yourself and the Money Will Follow"
+    },
+    {
+      "youtube_id": "YfrDPzRKtfU",
+      "channel": "AI Tools",
+      "title": "How Students Can Use AI to Earn Money Online"
+    },
+    {
+      "youtube_id": "QVKQQdF3AFI",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Most People Will Never Be Wealthy"
     }
   ],
   "daily_slots": {
@@ -2181,7 +2193,8 @@
         "evening"
       ],
       "2026-09-06": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2190,7 +2203,8 @@
         "evening"
       ],
       "2026-09-06": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
