@@ -430,11 +430,13 @@
     "1T3RMSD3uhiBTtCcVucp2SQSuOZx_Oooa",
     "820T1SSa",
     "1WNOKnkr-OxOnW64VheuVNmhB51pEyZYo",
-    "4q91HYqa"
+    "4q91HYqa",
+    "1yyhFs900XrZUSdyn4_Th0ilmGPSY20Jw",
+    "8y0XXQqS"
   ],
   "channel_counts": {
-    "AI Tools": 259,
-    "Sigma Mindset Shorts": 172
+    "AI Tools": 260,
+    "Sigma Mindset Shorts": 173
   },
   "youtube_videos": [
     {
@@ -2196,6 +2198,16 @@
       "youtube_id": "5Tha6jA6UEo",
       "channel": "Sigma Mindset Shorts",
       "title": "The Habits of Men Who Win in Life"
+    },
+    {
+      "youtube_id": "gn5jTK2hwzQ",
+      "channel": "AI Tools",
+      "title": "The Future of Business Is AI and Here Is Why"
+    },
+    {
+      "youtube_id": "vF6pt-DU85U",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Wasting Time and Start Building Wealth"
     }
   ],
   "daily_slots": {
@@ -2205,7 +2217,8 @@
         "evening"
       ],
       "2026-09-07": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2214,7 +2227,8 @@
         "evening"
       ],
       "2026-09-07": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
