@@ -438,11 +438,13 @@
     "1ttkNeco847hlmF6RS2totLUp4gTpaark",
     "Ju8j0aLQ",
     "13YlzmoTi515HaCVyyydYwqfNYI1V0PNV",
-    "Zuk3wazJ"
+    "Zuk3wazJ",
+    "1fGbKx9rvA_l9J_LrXGwYoNzerpAjHowb",
+    "4m01AASZ"
   ],
   "channel_counts": {
-    "AI Tools": 263,
-    "Sigma Mindset Shorts": 176
+    "AI Tools": 264,
+    "Sigma Mindset Shorts": 177
   },
   "youtube_videos": [
     {
@@ -2244,6 +2246,16 @@
       "youtube_id": "ffJtR3Cg94Y",
       "channel": "Sigma Mindset Shorts",
       "title": "You Are One Decision Away From Changing Your Life"
+    },
+    {
+      "youtube_id": "WRGzTR_bmm0",
+      "channel": "AI Tools",
+      "title": "How AI Is Helping People Quit Their 9 to 5"
+    },
+    {
+      "youtube_id": "cEYzKTy0e3E",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Difference Between Rich Men and Broke Men"
     }
   ],
   "daily_slots": {
@@ -2253,7 +2265,8 @@
         "evening"
       ],
       "2026-09-09": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2262,7 +2275,8 @@
         "evening"
       ],
       "2026-09-09": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
