@@ -444,11 +444,13 @@
     "1YpPqsOleXwIFGYxWIPL7hkR_wpQXQ2Ev",
     "dqslSKhA",
     "1B3V5kjXXNZT63eoIULVSeTTFZVoEt3IC",
-    "E30HnSoT"
+    "E30HnSoT",
+    "16oeCdpNp0BH_P2iYI-dvwVc7JjwrOeFZ",
+    "YusjiA6R"
   ],
   "channel_counts": {
-    "AI Tools": 266,
-    "Sigma Mindset Shorts": 179
+    "AI Tools": 267,
+    "Sigma Mindset Shorts": 180
   },
   "youtube_videos": [
     {
@@ -2280,27 +2282,35 @@
       "youtube_id": "b7s8NOOqKEY",
       "channel": "Sigma Mindset Shorts",
       "title": "Stop Seeking Validation and Start Making Money"
+    },
+    {
+      "youtube_id": "3-h6SjAop4o",
+      "channel": "AI Tools",
+      "title": "Learn These AI Tools Before Everyone Else Does"
+    },
+    {
+      "youtube_id": "E4w8i3h6z7E",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Friend Group That Will Make You Rich"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-09-09": [
-        "morning",
-        "evening"
-      ],
       "2026-09-10": [
         "morning",
         "evening"
+      ],
+      "2026-09-11": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-09-09": [
-        "morning",
-        "evening"
-      ],
       "2026-09-10": [
         "morning",
         "evening"
+      ],
+      "2026-09-11": [
+        "morning"
       ]
     }
   }
