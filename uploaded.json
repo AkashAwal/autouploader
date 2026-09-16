@@ -466,11 +466,13 @@
     "1CbVtiFv0M8sOJP0e_L_HZ0fscqUngek4",
     "Ej1hhIaB",
     "1nx1pAdVT4wtI6zvm_IE3SzrfdIpQH1_i",
-    "R703yaiY"
+    "R703yaiY",
+    "1-rx3dCfyZi1eokAUaG3e6n0ItJiIlL0L",
+    "ZmtBmAKB"
   ],
   "channel_counts": {
-    "AI Tools": 277,
-    "Sigma Mindset Shorts": 190
+    "AI Tools": 278,
+    "Sigma Mindset Shorts": 191
   },
   "youtube_videos": [
     {
@@ -2412,6 +2414,16 @@
       "youtube_id": "df6yrz_9hOk",
       "channel": "Sigma Mindset Shorts",
       "title": "Get Obsessed With Your Goals or Stay Average"
+    },
+    {
+      "youtube_id": "WnnDOYB8mqI",
+      "channel": "AI Tools",
+      "title": "AI Tools to Work Smarter Not Harder in 2026"
+    },
+    {
+      "youtube_id": "T-pi5gcwdis",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Broke People Have Broke Friends"
     }
   ],
   "daily_slots": {
@@ -2421,7 +2433,8 @@
         "evening"
       ],
       "2026-09-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2430,7 +2443,8 @@
         "evening"
       ],
       "2026-09-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
