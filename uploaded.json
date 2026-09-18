@@ -472,11 +472,13 @@
     "13EHYfJUmELoZF5AAJKBUMFYYtDDis9aG",
     "Jv8jFKhY",
     "1z3Gg2jAqVTPNf2ckNwZ-c87eM8Ggf0jJ",
-    "BnlVDIaJ"
+    "BnlVDIaJ",
+    "1scxY3WJKNggpB7-LHki2hpgXodD5KubR",
+    "QqtlkCyB"
   ],
   "channel_counts": {
-    "AI Tools": 280,
-    "Sigma Mindset Shorts": 193
+    "AI Tools": 281,
+    "Sigma Mindset Shorts": 194
   },
   "youtube_videos": [
     {
@@ -2448,6 +2450,16 @@
       "youtube_id": "0ZGSE_kQ1nY",
       "channel": "Sigma Mindset Shorts",
       "title": "Stop Complaining and Start Earning"
+    },
+    {
+      "youtube_id": "W71jwcwUmmQ",
+      "channel": "AI Tools",
+      "title": "AI Tools That Replace Your Entire Team"
+    },
+    {
+      "youtube_id": "-OmQazJAH6Y",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How Successful Men Handle Failure"
     }
   ],
   "daily_slots": {
@@ -2455,12 +2467,18 @@
       "2026-09-17": [
         "morning",
         "evening"
+      ],
+      "2026-09-18": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-09-17": [
         "morning",
         "evening"
+      ],
+      "2026-09-18": [
+        "morning"
       ]
     }
   }
