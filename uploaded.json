@@ -484,11 +484,13 @@
     "1YS2PUcmSoH7aQHLcDZR6YeoswuLNi7Kh",
     "A29lxSDI",
     "1qod4Z3N8mQUu-dOzQq4GUgm22dfeAxAI",
-    "06lnCYBT"
+    "06lnCYBT",
+    "1BbJSjKvvTFo9YNT1oeyEHxx4MrMIh5ZC",
+    "xuszjSTJ"
   ],
   "channel_counts": {
-    "AI Tools": 286,
-    "Sigma Mindset Shorts": 199
+    "AI Tools": 287,
+    "Sigma Mindset Shorts": 200
   },
   "youtube_videos": [
     {
@@ -2520,27 +2522,35 @@
       "youtube_id": "_hGZyFBzg8w",
       "channel": "Sigma Mindset Shorts",
       "title": "Surround Yourself With Winners or Stay Losing"
+    },
+    {
+      "youtube_id": "e34HVFB_70k",
+      "channel": "AI Tools",
+      "title": "AI Tools to Automate Your Business in 2026"
+    },
+    {
+      "youtube_id": "aBAzsa9hpqI",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Get Uncomfortable or Stay Broke Forever"
     }
   ],
   "daily_slots": {
     "AI Tools": {
-      "2026-09-19": [
-        "morning",
-        "evening"
-      ],
       "2026-09-20": [
         "morning",
         "evening"
+      ],
+      "2026-09-21": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
-      "2026-09-19": [
-        "morning",
-        "evening"
-      ],
       "2026-09-20": [
         "morning",
         "evening"
+      ],
+      "2026-09-21": [
+        "morning"
       ]
     }
   }
