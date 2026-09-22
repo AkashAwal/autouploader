@@ -490,11 +490,13 @@
     "12PhjVcw-BnteHa21ixQzfPndF-fDmMH0",
     "1393lCxJ",
     "1_46GRzvLjYLoO9l3eAjt-zDInTnxSLj6",
-    "hulDDYLA"
+    "hulDDYLA",
+    "1Um5QQztIMrZe6XuJFXp3AZsSlITGGwoA",
+    "8ys3xYyA"
   ],
   "channel_counts": {
-    "AI Tools": 289,
-    "Sigma Mindset Shorts": 202
+    "AI Tools": 290,
+    "Sigma Mindset Shorts": 203
   },
   "youtube_videos": [
     {
@@ -2556,6 +2558,16 @@
       "youtube_id": "j4uL5NIW07w",
       "channel": "Sigma Mindset Shorts",
       "title": "The Mindset That Separates the Rich From the Poor"
+    },
+    {
+      "youtube_id": "Uow5nn9cB_U",
+      "channel": "AI Tools",
+      "title": "The Future of Business Is AI and Here Is Why"
+    },
+    {
+      "youtube_id": "WwizfnLteYc",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Being Average and Start Getting Rich"
     }
   ],
   "daily_slots": {
@@ -2565,7 +2577,8 @@
         "evening"
       ],
       "2026-09-22": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2574,7 +2587,8 @@
         "evening"
       ],
       "2026-09-22": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
