@@ -492,11 +492,13 @@
     "1_46GRzvLjYLoO9l3eAjt-zDInTnxSLj6",
     "hulDDYLA",
     "1Um5QQztIMrZe6XuJFXp3AZsSlITGGwoA",
-    "8ys3xYyA"
+    "8ys3xYyA",
+    "1deR99EvUjif06rp_Jhdna1SBbTpT-g7U",
+    "Zn9TzACL"
   ],
   "channel_counts": {
-    "AI Tools": 290,
-    "Sigma Mindset Shorts": 203
+    "AI Tools": 291,
+    "Sigma Mindset Shorts": 204
   },
   "youtube_videos": [
     {
@@ -2568,6 +2570,16 @@
       "youtube_id": "WwizfnLteYc",
       "channel": "Sigma Mindset Shorts",
       "title": "Stop Being Average and Start Getting Rich"
+    },
+    {
+      "youtube_id": "CMcpXj4I3fU",
+      "channel": "AI Tools",
+      "title": "AI Tools That Save You Hours Every Single Day"
+    },
+    {
+      "youtube_id": "7onK-djGao8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Discipline Is the Only Way Out of Poverty"
     }
   ],
   "daily_slots": {
@@ -2575,12 +2587,18 @@
       "2026-09-22": [
         "morning",
         "evening"
+      ],
+      "2026-09-23": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-09-22": [
         "morning",
         "evening"
+      ],
+      "2026-09-23": [
+        "morning"
       ]
     }
   }
