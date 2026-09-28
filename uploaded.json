@@ -514,11 +514,13 @@
     "1IGBuJ3JiipBO2D78G_9t76FC4ukXohj4",
     "kj91jQxK",
     "1nddSXGRPwQNaezXYVv2Nsvd60da7CoaF",
-    "p3ln0KYD"
+    "p3ln0KYD",
+    "1kLiDDgMTrlaiEWfbckM5KYWxMfBfQ7ch",
+    "szkhwYTC"
   ],
   "channel_counts": {
-    "AI Tools": 301,
-    "Sigma Mindset Shorts": 214
+    "AI Tools": 302,
+    "Sigma Mindset Shorts": 215
   },
   "youtube_videos": [
     {
@@ -2700,6 +2702,16 @@
       "youtube_id": "ui3yp97j1lc",
       "channel": "Sigma Mindset Shorts",
       "title": "Quality Over Quantity When It Comes to Friends"
+    },
+    {
+      "youtube_id": "z5wPCekOMY4",
+      "channel": "AI Tools",
+      "title": "Start Your Business With These AI Tools"
+    },
+    {
+      "youtube_id": "RclA-0rRfuE",
+      "channel": "Sigma Mindset Shorts",
+      "title": "This Is What Real Discipline Looks Like"
     }
   ],
   "daily_slots": {
@@ -2709,7 +2721,8 @@
         "evening"
       ],
       "2026-09-28": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2718,7 +2731,8 @@
         "evening"
       ],
       "2026-09-28": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
