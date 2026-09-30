@@ -522,11 +522,13 @@
     "1E6xUfPXxc_IpIMqbv73ROB5XBOUM2wG0",
     "g29TVabY",
     "1fXPN9iLKZ1qOpR9m09EnGsO-1Dnqhyve",
-    "on0hRCib"
+    "on0hRCib",
+    "1KWook6yPpdyIzUWxBnQSK62QfJJzh8C3",
+    "5i0x3IDI"
   ],
   "channel_counts": {
-    "AI Tools": 305,
-    "Sigma Mindset Shorts": 218
+    "AI Tools": 306,
+    "Sigma Mindset Shorts": 219
   },
   "youtube_videos": [
     {
@@ -2748,6 +2750,16 @@
       "youtube_id": "dNkVQEmsM4Q",
       "channel": "Sigma Mindset Shorts",
       "title": "How Focused Men Build Generational Wealth"
+    },
+    {
+      "youtube_id": "oHtA0jn8XCI",
+      "channel": "AI Tools",
+      "title": "Top AI Tools Every Entrepreneur Must Use"
+    },
+    {
+      "youtube_id": "uvzRGzt_QYo",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Seeking Validation and Start Making Money"
     }
   ],
   "daily_slots": {
@@ -2757,7 +2769,8 @@
         "evening"
       ],
       "2026-09-30": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2766,7 +2779,8 @@
         "evening"
       ],
       "2026-09-30": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
