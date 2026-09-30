@@ -520,11 +520,13 @@
     "18pR_Z0TXiJmj9rp8r1IyhpRJhx3S2T0D",
     "pzsxSAqR",
     "1E6xUfPXxc_IpIMqbv73ROB5XBOUM2wG0",
-    "g29TVabY"
+    "g29TVabY",
+    "1fXPN9iLKZ1qOpR9m09EnGsO-1Dnqhyve",
+    "on0hRCib"
   ],
   "channel_counts": {
-    "AI Tools": 304,
-    "Sigma Mindset Shorts": 217
+    "AI Tools": 305,
+    "Sigma Mindset Shorts": 218
   },
   "youtube_videos": [
     {
@@ -2736,6 +2738,16 @@
       "youtube_id": "NzBwly0Yfu0",
       "channel": "Sigma Mindset Shorts",
       "title": "The Difference Between Rich Men and Broke Men"
+    },
+    {
+      "youtube_id": "Od7ZAUwneoc",
+      "channel": "AI Tools",
+      "title": "AI Tools That Will Change Your Life in 2026"
+    },
+    {
+      "youtube_id": "dNkVQEmsM4Q",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How Focused Men Build Generational Wealth"
     }
   ],
   "daily_slots": {
@@ -2743,12 +2755,18 @@
       "2026-09-29": [
         "morning",
         "evening"
+      ],
+      "2026-09-30": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-09-29": [
         "morning",
         "evening"
+      ],
+      "2026-09-30": [
+        "morning"
       ]
     }
   }
