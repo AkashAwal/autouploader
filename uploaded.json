@@ -526,11 +526,13 @@
     "1KWook6yPpdyIzUWxBnQSK62QfJJzh8C3",
     "5i0x3IDI",
     "1h9PacRPDGY5BvpD6nwE89rOE5uSod4mU",
-    "smtlRKAR"
+    "smtlRKAR",
+    "1cbQmgA8SQVuw39Cup5M6hbZ0ZXaZNKhT",
+    "Fm1jzKqY"
   ],
   "channel_counts": {
-    "AI Tools": 307,
-    "Sigma Mindset Shorts": 220
+    "AI Tools": 308,
+    "Sigma Mindset Shorts": 221
   },
   "youtube_videos": [
     {
@@ -2772,6 +2774,16 @@
       "youtube_id": "Hepb-tjkdqs",
       "channel": "Sigma Mindset Shorts",
       "title": "The Friend Group That Will Make You Rich"
+    },
+    {
+      "youtube_id": "G5t8MyD37TE",
+      "channel": "AI Tools",
+      "title": "AI Tools to Work Smarter Not Harder in 2026"
+    },
+    {
+      "youtube_id": "s5O515pf1MM",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How to Develop an Unbreakable Mindset"
     }
   ],
   "daily_slots": {
@@ -2781,7 +2793,8 @@
         "evening"
       ],
       "2026-10-01": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2790,7 +2803,8 @@
         "evening"
       ],
       "2026-10-01": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
