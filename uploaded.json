@@ -534,11 +534,13 @@
     "1HEKCOqmWPMl6mv9JPxqDdZ3nZ4L3LSR1",
     "J68DUKCZ",
     "1f92ioYsdVQSGMha3ft_rMSII-uRpPds7",
-    "k2ljRCIL"
+    "k2ljRCIL",
+    "1aSTHP6bpHVfpcB9k0yw8Bzz1SMLA1eX-",
+    "sjlT1QQZ"
   ],
   "channel_counts": {
-    "AI Tools": 311,
-    "Sigma Mindset Shorts": 224
+    "AI Tools": 312,
+    "Sigma Mindset Shorts": 225
   },
   "youtube_videos": [
     {
@@ -2820,6 +2822,16 @@
       "youtube_id": "x32V5gI3eOY",
       "channel": "Sigma Mindset Shorts",
       "title": "The Morning Routine That Changed My Financial Life"
+    },
+    {
+      "youtube_id": "b7pTY_sdlRs",
+      "channel": "AI Tools",
+      "title": "Make Money Online With These AI Tools in 2026"
+    },
+    {
+      "youtube_id": "WXvdvcZM6Ms",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Why Smart People Stay Broke and What to Do About It"
     }
   ],
   "daily_slots": {
@@ -2829,7 +2841,8 @@
         "evening"
       ],
       "2026-10-03": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -2838,7 +2851,8 @@
         "evening"
       ],
       "2026-10-03": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
