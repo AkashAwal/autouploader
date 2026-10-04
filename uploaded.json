@@ -536,11 +536,13 @@
     "1f92ioYsdVQSGMha3ft_rMSII-uRpPds7",
     "k2ljRCIL",
     "1aSTHP6bpHVfpcB9k0yw8Bzz1SMLA1eX-",
-    "sjlT1QQZ"
+    "sjlT1QQZ",
+    "1qXSuw93unT2T5ASM4nS3kHCh5QD2gZu4",
+    "kj8XFYjZ"
   ],
   "channel_counts": {
-    "AI Tools": 312,
-    "Sigma Mindset Shorts": 225
+    "AI Tools": 313,
+    "Sigma Mindset Shorts": 226
   },
   "youtube_videos": [
     {
@@ -2832,6 +2834,16 @@
       "youtube_id": "WXvdvcZM6Ms",
       "channel": "Sigma Mindset Shorts",
       "title": "Why Smart People Stay Broke and What to Do About It"
+    },
+    {
+      "youtube_id": "ApvTR_hm2xo",
+      "channel": "AI Tools",
+      "title": "AI Tools Every Freelancer Needs Right Now"
+    },
+    {
+      "youtube_id": "rX_b6lMW9dU",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Real Men Build Empires Not Excuses"
     }
   ],
   "daily_slots": {
@@ -2839,12 +2851,18 @@
       "2026-10-03": [
         "morning",
         "evening"
+      ],
+      "2026-10-04": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-10-03": [
         "morning",
         "evening"
+      ],
+      "2026-10-04": [
+        "morning"
       ]
     }
   }
