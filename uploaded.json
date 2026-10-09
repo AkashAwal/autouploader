@@ -556,11 +556,13 @@
     "1mEBjHwW06KdVSvkzd2kvey0qNt7CL4Wt",
     "Rz8nia4a",
     "13cghu5sZ_5ENjM-BYu36mwnUffmjUj6b",
-    "l2sXjSCJ"
+    "l2sXjSCJ",
+    "1y_H5aWCnC2XffRzV9c1xagTTRdzvSSxU",
+    "Jz1TwYoB"
   ],
   "channel_counts": {
-    "AI Tools": 322,
-    "Sigma Mindset Shorts": 235
+    "AI Tools": 323,
+    "Sigma Mindset Shorts": 236
   },
   "youtube_videos": [
     {
@@ -2952,6 +2954,16 @@
       "youtube_id": "GeLjQqH3Ewg",
       "channel": "Sigma Mindset Shorts",
       "title": "The Wealth Mindset You Need Before 25"
+    },
+    {
+      "youtube_id": "LO4vN6fFgTg",
+      "channel": "AI Tools",
+      "title": "AI Tools That Every Content Creator Must Know"
+    },
+    {
+      "youtube_id": "Xwsgg1O7jgc",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Focus Is the New Currency in 2026"
     }
   ],
   "daily_slots": {
@@ -2959,12 +2971,18 @@
       "2026-10-08": [
         "morning",
         "evening"
+      ],
+      "2026-10-09": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-10-08": [
         "morning",
         "evening"
+      ],
+      "2026-10-09": [
+        "morning"
       ]
     }
   }
