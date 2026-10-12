@@ -570,11 +570,13 @@
     "134305VXtKMV17aeCkn3oNzw7yFauO_a3",
     "EilR0KbB",
     "1_qf7upgJmq6JvY6cJLOBl3jO8FsEoH5z",
-    "0ulRwAIJ"
+    "0ulRwAIJ",
+    "1_HNL0yS7iIro3RkQdhiUewVfBCKZIXst",
+    "0v8DAQTR"
   ],
   "channel_counts": {
-    "AI Tools": 329,
-    "Sigma Mindset Shorts": 242
+    "AI Tools": 330,
+    "Sigma Mindset Shorts": 243
   },
   "youtube_videos": [
     {
@@ -3036,6 +3038,16 @@
       "youtube_id": "9A06VwuX8wg",
       "channel": "Sigma Mindset Shorts",
       "title": "The Mindset That Separates the Rich From the Poor"
+    },
+    {
+      "youtube_id": "45o_dGpcNVI",
+      "channel": "AI Tools",
+      "title": "AI Tools That Are Completely Free and Incredibly Powerful"
+    },
+    {
+      "youtube_id": "yDcSfAopkmk",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Being Average and Start Getting Rich"
     }
   ],
   "daily_slots": {
@@ -3045,7 +3057,8 @@
         "evening"
       ],
       "2026-10-12": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3054,7 +3067,8 @@
         "evening"
       ],
       "2026-10-12": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
