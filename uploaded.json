@@ -582,11 +582,13 @@
     "1DiFyHTdN8S6udY_n633czn_MwFWRQsmY",
     "BnkTHIIK",
     "15kKHG8cdqevtA3V9a3HbpEVIkqKhTJ6q",
-    "5ukjDQoY"
+    "5ukjDQoY",
+    "1poaXdXfp3eosysfoncQSwWhgnheAZNlj",
+    "Ar8TmS7Y"
   ],
   "channel_counts": {
-    "AI Tools": 335,
-    "Sigma Mindset Shorts": 248
+    "AI Tools": 336,
+    "Sigma Mindset Shorts": 249
   },
   "youtube_videos": [
     {
@@ -3108,6 +3110,16 @@
       "youtube_id": "N_gkDJwFzFk",
       "channel": "Sigma Mindset Shorts",
       "title": "The Truth About Making Money Nobody Tells You"
+    },
+    {
+      "youtube_id": "PsSzgSDmlBk",
+      "channel": "AI Tools",
+      "title": "Top AI Tools Every Entrepreneur Must Use"
+    },
+    {
+      "youtube_id": "ENitcWDATFs",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Cut Off Low Value People and Watch Your Life Change"
     }
   ],
   "daily_slots": {
@@ -3117,7 +3129,8 @@
         "evening"
       ],
       "2026-10-15": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3126,7 +3139,8 @@
         "evening"
       ],
       "2026-10-15": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
