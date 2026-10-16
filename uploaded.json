@@ -584,11 +584,13 @@
     "15kKHG8cdqevtA3V9a3HbpEVIkqKhTJ6q",
     "5ukjDQoY",
     "1poaXdXfp3eosysfoncQSwWhgnheAZNlj",
-    "Ar8TmS7Y"
+    "Ar8TmS7Y",
+    "1uIajW4SmcX9Png4mklkAzn6kNpmnxRXC",
+    "5nkxSC4A"
   ],
   "channel_counts": {
-    "AI Tools": 336,
-    "Sigma Mindset Shorts": 249
+    "AI Tools": 337,
+    "Sigma Mindset Shorts": 250
   },
   "youtube_videos": [
     {
@@ -3120,6 +3122,16 @@
       "youtube_id": "ENitcWDATFs",
       "channel": "Sigma Mindset Shorts",
       "title": "Cut Off Low Value People and Watch Your Life Change"
+    },
+    {
+      "youtube_id": "AawMUqtr1_0",
+      "channel": "AI Tools",
+      "title": "Free AI Tools to Grow Your Business Fast"
+    },
+    {
+      "youtube_id": "m9rFuYUkuDc",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Focus on Yourself and the Money Will Follow"
     }
   ],
   "daily_slots": {
@@ -3127,12 +3139,18 @@
       "2026-10-15": [
         "morning",
         "evening"
+      ],
+      "2026-10-16": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-10-15": [
         "morning",
         "evening"
+      ],
+      "2026-10-16": [
+        "morning"
       ]
     }
   }
