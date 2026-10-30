@@ -640,11 +640,13 @@
     "1jtsczCz4B-9cOndokDaekNVaEQQlDerK",
     "Ru0hzKYT",
     "1c5TvtKnT2jeH14sxV_oxFOdBClYL6MrI",
-    "Q7kViKzQ"
+    "Q7kViKzQ",
+    "1nZ9CBTzME2geOreEctspqQpeR0Iw9C6z",
+    "UzszkIRQ"
   ],
   "channel_counts": {
-    "AI Tools": 364,
-    "Sigma Mindset Shorts": 277
+    "AI Tools": 365,
+    "Sigma Mindset Shorts": 278
   },
   "youtube_videos": [
     {
@@ -3456,6 +3458,16 @@
       "youtube_id": "QduiGQBI7cw",
       "channel": "Sigma Mindset Shorts",
       "title": "How to Think Like a Millionaire Every Day"
+    },
+    {
+      "youtube_id": "Gt67VmOTOk4",
+      "channel": "AI Tools",
+      "title": "AI Tools That Will Change Your Life in 2026"
+    },
+    {
+      "youtube_id": "Sr9UgUzuJZs",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Qualities of a High Value Man"
     }
   ],
   "daily_slots": {
@@ -3463,12 +3475,18 @@
       "2026-10-29": [
         "morning",
         "evening"
+      ],
+      "2026-10-30": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-10-29": [
         "morning",
         "evening"
+      ],
+      "2026-10-30": [
+        "morning"
       ]
     }
   }
