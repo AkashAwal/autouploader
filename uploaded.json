@@ -654,11 +654,13 @@
     "1ARWJFdURXSFoW_Clw9DcXupZcLOM-bQp",
     "l21RHQTb",
     "1kM-8H5OUl7vTb_xhJk2AT5JIu9kNse3F",
-    "FutxQAbQ"
+    "FutxQAbQ",
+    "1i7ClAysOagAHc-G6-Qbf15oVmDP0ia44",
+    "pvthlSgR"
   ],
   "channel_counts": {
-    "AI Tools": 371,
-    "Sigma Mindset Shorts": 284
+    "AI Tools": 372,
+    "Sigma Mindset Shorts": 285
   },
   "youtube_videos": [
     {
@@ -3540,6 +3542,16 @@
       "youtube_id": "X0Iiqf11ws0",
       "channel": "Sigma Mindset Shorts",
       "title": "Discipline Is the Only Way Out of Poverty"
+    },
+    {
+      "youtube_id": "etQJv4ZAsHU",
+      "channel": "AI Tools",
+      "title": "Make Money Online With These AI Tools in 2026"
+    },
+    {
+      "youtube_id": "iF27FNtFD_g",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Your Circle Is Keeping You Poor"
     }
   ],
   "daily_slots": {
@@ -3549,7 +3561,8 @@
         "evening"
       ],
       "2026-11-02": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3558,7 +3571,8 @@
         "evening"
       ],
       "2026-11-02": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
