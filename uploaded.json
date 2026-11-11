@@ -690,11 +690,13 @@
     "1IvvBO6hXhxQzUwY4dMxjIXw5mW2Dfiq9",
     "lq1TSIpb",
     "1HWwFS6oDbOm4S0o4AAn6by8D6WX3Obmi",
-    "Vy8F3IyI"
+    "Vy8F3IyI",
+    "1uAki4JFkJ8mGWjGJc0u4lObTA8HQiBn2",
+    "NvlFGCqJ"
   ],
   "channel_counts": {
-    "AI Tools": 389,
-    "Sigma Mindset Shorts": 302
+    "AI Tools": 390,
+    "Sigma Mindset Shorts": 303
   },
   "youtube_videos": [
     {
@@ -3756,6 +3758,16 @@
       "youtube_id": "Z1ftrZhWVV4",
       "channel": "Sigma Mindset Shorts",
       "title": "Women Respect Men Who Have These Qualities"
+    },
+    {
+      "youtube_id": "inrDSFp2y70",
+      "channel": "AI Tools",
+      "title": "AI Tools That Are Completely Free and Incredibly Powerful"
+    },
+    {
+      "youtube_id": "v6I9zvyABm8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Build Yourself Before You Build Anything Else"
     }
   ],
   "daily_slots": {
@@ -3765,7 +3777,8 @@
         "evening"
       ],
       "2026-11-11": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3774,7 +3787,8 @@
         "evening"
       ],
       "2026-11-11": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
