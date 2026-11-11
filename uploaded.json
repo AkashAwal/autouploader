@@ -688,11 +688,13 @@
     "1jJ_MnlBs7o0NfhOLAXGfoOF92WyOH3Pd",
     "1msF3IzI",
     "1IvvBO6hXhxQzUwY4dMxjIXw5mW2Dfiq9",
-    "lq1TSIpb"
+    "lq1TSIpb",
+    "1HWwFS6oDbOm4S0o4AAn6by8D6WX3Obmi",
+    "Vy8F3IyI"
   ],
   "channel_counts": {
-    "AI Tools": 388,
-    "Sigma Mindset Shorts": 301
+    "AI Tools": 389,
+    "Sigma Mindset Shorts": 302
   },
   "youtube_videos": [
     {
@@ -3744,6 +3746,16 @@
       "youtube_id": "pi_bkXqxa1Q",
       "channel": "Sigma Mindset Shorts",
       "title": "How to Develop an Unbreakable Mindset"
+    },
+    {
+      "youtube_id": "Qb66UJDFHW4",
+      "channel": "AI Tools",
+      "title": "How to Use AI to Build Multiple Income Streams"
+    },
+    {
+      "youtube_id": "Z1ftrZhWVV4",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Women Respect Men Who Have These Qualities"
     }
   ],
   "daily_slots": {
@@ -3751,12 +3763,18 @@
       "2026-11-10": [
         "morning",
         "evening"
+      ],
+      "2026-11-11": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-11-10": [
         "morning",
         "evening"
+      ],
+      "2026-11-11": [
+        "morning"
       ]
     }
   }
