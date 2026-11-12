@@ -692,11 +692,13 @@
     "1HWwFS6oDbOm4S0o4AAn6by8D6WX3Obmi",
     "Vy8F3IyI",
     "1uAki4JFkJ8mGWjGJc0u4lObTA8HQiBn2",
-    "NvlFGCqJ"
+    "NvlFGCqJ",
+    "1Kt_-2F8R8Vpsnv5j8ZstC_gkr3o0SJm_",
+    "k203hIxI"
   ],
   "channel_counts": {
-    "AI Tools": 390,
-    "Sigma Mindset Shorts": 303
+    "AI Tools": 391,
+    "Sigma Mindset Shorts": 304
   },
   "youtube_videos": [
     {
@@ -3768,6 +3770,16 @@
       "youtube_id": "v6I9zvyABm8",
       "channel": "Sigma Mindset Shorts",
       "title": "Build Yourself Before You Build Anything Else"
+    },
+    {
+      "youtube_id": "YdmJRWEejLQ",
+      "channel": "AI Tools",
+      "title": "AI Tools You Need to Know in 2026"
+    },
+    {
+      "youtube_id": "DsCG2oemUxA",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Morning Routine That Changed My Financial Life"
     }
   ],
   "daily_slots": {
@@ -3775,12 +3787,18 @@
       "2026-11-11": [
         "morning",
         "evening"
+      ],
+      "2026-11-12": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-11-11": [
         "morning",
         "evening"
+      ],
+      "2026-11-12": [
+        "morning"
       ]
     }
   }
