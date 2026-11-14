@@ -702,11 +702,13 @@
     "1xXzNrZkzG15VkjaaJ8negVcfLG2wuWHe",
     "w6t1WSTC",
     "1dxOLEHh3weOSw_MPuJ_NyreTmi9g8XQw",
-    "cusXjCpZ"
+    "cusXjCpZ",
+    "1bay7XwE41WfIw9llqsk9oSTKlRS8KWWF",
+    "xrlBmIII"
   ],
   "channel_counts": {
-    "AI Tools": 395,
-    "Sigma Mindset Shorts": 308
+    "AI Tools": 396,
+    "Sigma Mindset Shorts": 309
   },
   "youtube_videos": [
     {
@@ -3828,6 +3830,16 @@
       "youtube_id": "tzy-EeM2uTI",
       "channel": "Sigma Mindset Shorts",
       "title": "How to Attract Wealth Through Discipline"
+    },
+    {
+      "youtube_id": "6dpYYnWr3Us",
+      "channel": "AI Tools",
+      "title": "Top AI Tools Every Entrepreneur Must Use"
+    },
+    {
+      "youtube_id": "LFdB47MlHzo",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Power of Saying No to the Wrong People"
     }
   ],
   "daily_slots": {
@@ -3837,7 +3849,8 @@
         "evening"
       ],
       "2026-11-14": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3846,7 +3859,8 @@
         "evening"
       ],
       "2026-11-14": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
