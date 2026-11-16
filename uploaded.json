@@ -710,11 +710,13 @@
     "1Ch7sVVKDeeeDqTTe9VNusJLvHTmzQL8d",
     "pq8nnYhZ",
     "1ueTMMkM1K4wJlfzXAV4rRO30uRLcQPw-",
-    "06l11KaJ"
+    "06l11KaJ",
+    "1SEpIIOHrSpQzVqdd--KtHx6tk8nidViQ",
+    "B29DWQBB"
   ],
   "channel_counts": {
-    "AI Tools": 399,
-    "Sigma Mindset Shorts": 312
+    "AI Tools": 400,
+    "Sigma Mindset Shorts": 313
   },
   "youtube_videos": [
     {
@@ -3876,6 +3878,16 @@
       "youtube_id": "thy32bsVq9c",
       "channel": "Sigma Mindset Shorts",
       "title": "The Silent Moves That Build Real Wealth"
+    },
+    {
+      "youtube_id": "-E2Gpt4IOc0",
+      "channel": "AI Tools",
+      "title": "How to Start a Business From Home With AI"
+    },
+    {
+      "youtube_id": "CCzSgU4NGnM",
+      "channel": "Sigma Mindset Shorts",
+      "title": "Stop Complaining and Start Earning"
     }
   ],
   "daily_slots": {
@@ -3885,7 +3897,8 @@
         "evening"
       ],
       "2026-11-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3894,7 +3907,8 @@
         "evening"
       ],
       "2026-11-16": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
