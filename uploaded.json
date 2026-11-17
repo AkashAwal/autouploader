@@ -714,11 +714,13 @@
     "1SEpIIOHrSpQzVqdd--KtHx6tk8nidViQ",
     "B29DWQBB",
     "1tViIk0k9V-kiJ2wufajKlcYJwzAxu3EX",
-    "gvsBya5a"
+    "gvsBya5a",
+    "1GlKAlrvAkNr_wtLr3HiwHN7s3_AXVfIV",
+    "N78zyazI"
   ],
   "channel_counts": {
-    "AI Tools": 401,
-    "Sigma Mindset Shorts": 314
+    "AI Tools": 402,
+    "Sigma Mindset Shorts": 315
   },
   "youtube_videos": [
     {
@@ -3900,6 +3902,16 @@
       "youtube_id": "zBTfVNi7e6s",
       "channel": "Sigma Mindset Shorts",
       "title": "How Successful Men Handle Failure"
+    },
+    {
+      "youtube_id": "w_HckXPY088",
+      "channel": "AI Tools",
+      "title": "Make Money Online With These AI Tools in 2026"
+    },
+    {
+      "youtube_id": "X1PLeV5hYx4",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Wealth Mindset You Need Before 25"
     }
   ],
   "daily_slots": {
@@ -3909,7 +3921,8 @@
         "evening"
       ],
       "2026-11-17": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3918,7 +3931,8 @@
         "evening"
       ],
       "2026-11-17": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
