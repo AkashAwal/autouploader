@@ -718,11 +718,13 @@
     "1GlKAlrvAkNr_wtLr3HiwHN7s3_AXVfIV",
     "N78zyazI",
     "11fXCcaJFR7sAOXXEsfW4uf62c8BREV5J",
-    "l60XDAwa"
+    "l60XDAwa",
+    "1z5rTKynm3BljWa-FmwWgDD9kE8J6h84z",
+    "1mtFEIIT"
   ],
   "channel_counts": {
-    "AI Tools": 403,
-    "Sigma Mindset Shorts": 316
+    "AI Tools": 404,
+    "Sigma Mindset Shorts": 317
   },
   "youtube_videos": [
     {
@@ -3924,6 +3926,16 @@
       "youtube_id": "upDeMlbj768",
       "channel": "Sigma Mindset Shorts",
       "title": "Focus Is the New Currency in 2026"
+    },
+    {
+      "youtube_id": "KAk3qvS9k6s",
+      "channel": "AI Tools",
+      "title": "Build a Business With AI and Zero Experience"
+    },
+    {
+      "youtube_id": "G4DeCpjuhKQ",
+      "channel": "Sigma Mindset Shorts",
+      "title": "How to Think Like a Millionaire Every Day"
     }
   ],
   "daily_slots": {
@@ -3933,7 +3945,8 @@
         "evening"
       ],
       "2026-11-18": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3942,7 +3955,8 @@
         "evening"
       ],
       "2026-11-18": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
