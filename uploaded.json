@@ -726,11 +726,13 @@
     "1dW3xMFxLkxTD7F-iV7_0zIyOP4UBbkpi",
     "Um0BCIpR",
     "1aHI0T6ael8yhfAmuGwhnCj2-N30orBWe",
-    "AmsBzawD"
+    "AmsBzawD",
+    "1n9TDuPsXCPptcqK47w_nSo7PPl54CFel",
+    "8j0FiIgQ"
   ],
   "channel_counts": {
-    "AI Tools": 407,
-    "Sigma Mindset Shorts": 320
+    "AI Tools": 408,
+    "Sigma Mindset Shorts": 321
   },
   "youtube_videos": [
     {
@@ -3972,6 +3974,16 @@
       "youtube_id": "8E6v-1p94BU",
       "channel": "Sigma Mindset Shorts",
       "title": "Get Uncomfortable or Stay Broke Forever"
+    },
+    {
+      "youtube_id": "w9bwL-9oe_o",
+      "channel": "AI Tools",
+      "title": "How Students Can Use AI to Earn Money Online"
+    },
+    {
+      "youtube_id": "GRZFnB7b5XE",
+      "channel": "Sigma Mindset Shorts",
+      "title": "This Is Why You Are Still Broke"
     }
   ],
   "daily_slots": {
@@ -3981,7 +3993,8 @@
         "evening"
       ],
       "2026-11-20": [
-        "morning"
+        "morning",
+        "evening"
       ]
     },
     "Sigma Mindset Shorts": {
@@ -3990,7 +4003,8 @@
         "evening"
       ],
       "2026-11-20": [
-        "morning"
+        "morning",
+        "evening"
       ]
     }
   }
