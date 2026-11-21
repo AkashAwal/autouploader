@@ -728,11 +728,13 @@
     "1aHI0T6ael8yhfAmuGwhnCj2-N30orBWe",
     "AmsBzawD",
     "1n9TDuPsXCPptcqK47w_nSo7PPl54CFel",
-    "8j0FiIgQ"
+    "8j0FiIgQ",
+    "1IgX4CX6KkAAEsxOrU5wH5XmRGW0-eMw6",
+    "A31nmI6B"
   ],
   "channel_counts": {
-    "AI Tools": 408,
-    "Sigma Mindset Shorts": 321
+    "AI Tools": 409,
+    "Sigma Mindset Shorts": 322
   },
   "youtube_videos": [
     {
@@ -3984,6 +3986,16 @@
       "youtube_id": "GRZFnB7b5XE",
       "channel": "Sigma Mindset Shorts",
       "title": "This Is Why You Are Still Broke"
+    },
+    {
+      "youtube_id": "vGPgg5eb40I",
+      "channel": "AI Tools",
+      "title": "AI Tools You Should Start Using Today"
+    },
+    {
+      "youtube_id": "pEWSJYqBAA8",
+      "channel": "Sigma Mindset Shorts",
+      "title": "The Mindset That Separates the Rich From the Poor"
     }
   ],
   "daily_slots": {
@@ -3991,12 +4003,18 @@
       "2026-11-20": [
         "morning",
         "evening"
+      ],
+      "2026-11-21": [
+        "morning"
       ]
     },
     "Sigma Mindset Shorts": {
       "2026-11-20": [
         "morning",
         "evening"
+      ],
+      "2026-11-21": [
+        "morning"
       ]
     }
   }
